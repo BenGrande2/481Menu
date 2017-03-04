@@ -18,7 +18,7 @@ We'll use forks of this repository for development. Any changes will need a pull
 5. When you're done developing, commit and push the branch to your repository
     * `git add -A`
 	* `git commit -m "<message here>"`
-	* `git push origin branch-name
+	* `git push origin branch-name`
 	
 	(Ben, you should be able to just create a pull request to merge your branch directly with master from here)
 	
