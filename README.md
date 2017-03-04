@@ -20,6 +20,8 @@ We'll use forks of this repository for development. Any changes will need a pull
 	* `git commit -m "<message here>"`
 	* `git push origin branch-name`
 	
+	MAKE SURE YOU'RE NOT PUSHING DIRECTLY TO THE MASTER BRANCH
+	
 	(Ben, you should be able to just create a pull request to merge your branch directly with master from here)
 	
 6. Create a pull request by going to your github repo, and hitting the 'Create Pull Request' button that appears. You can also do this from Ben's repository
