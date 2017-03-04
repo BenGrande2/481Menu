@@ -63,8 +63,16 @@
     <Compile Include="Food.xaml.cs">
       <DependentUpon>Food.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ingredient.cs" />
+    <Compile Include="MenuItem.cs" />
     <Compile Include="Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderList.xaml.cs">
+      <DependentUpon>OrderList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMenuItem.xaml.cs">
+      <DependentUpon>OrderMenuItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="SpecialItem.xaml.cs">
       <DependentUpon>SpecialItem.xaml</DependentUpon>
@@ -104,6 +112,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderMenuItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

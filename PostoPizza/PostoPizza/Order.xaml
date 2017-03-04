@@ -9,6 +9,15 @@
       Title="Order">
 
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+            <StackPanel x:Name="OrderLists" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Orientation="Horizontal">
+                
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+                <Button Content="Send Order(s)"></Button>
+                <Button Content="Signal Server To Pay"></Button>
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </Page>

@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace PostoPizza
 {
     /// <summary>
-    /// Interaction logic for Order.xaml
+    /// Interaction logic for OrderMenuItem.xaml
     /// </summary>
-    public partial class Order : Page
+    public partial class OrderMenuItem : UserControl
     {
-        public Order()
+        public MenuItem menuItem
+        {
+            set
+            {
+                this.label.Content = value.title + " - " + value.price;
+            }
+        }
+       
+        public OrderMenuItem()
         {
             InitializeComponent();
-            OrderList orderList = new OrderList();
-            orderList.orderNum.Content = "Order #1";
-            
-            OrderLists.Children.Add(orderList);
-
-            Button addOrder = new Button();
-            addOrder.Content = "+ Add Order";
-            OrderLists.Children.Add(addOrder);
         }
     }
 }

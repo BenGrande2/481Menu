@@ -26,3 +26,7 @@
 \\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\Specials.baml
 \\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\SpecialItem.g.cs
 \\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\SpecialItem.baml
+\\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\OrderList.g.cs
+\\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\OrderList.baml
+\\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\OrderMenuItem.g.cs
+\\samba.cs.ucalgary.ca\benjamin.grande2\documents\visual studio 2015\Projects\PostoPizza\PostoPizza\obj\Debug\OrderMenuItem.baml

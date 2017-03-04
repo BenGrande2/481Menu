@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="PostoPizza.OrderMenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PostoPizza"
+             mc:Ignorable="d" Height="64.531" Width="216.934">
+    <Grid Height="65" VerticalAlignment="Top">
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="65" Width="207"/>
+    </Grid>
+</UserControl>
