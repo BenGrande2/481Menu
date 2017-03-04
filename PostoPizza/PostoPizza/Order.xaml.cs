@@ -32,5 +32,15 @@ namespace PostoPizza
             addOrder.Content = "+ Add Order";
             OrderLists.Children.Add(addOrder);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void resizeOrder(object sender, SizeChangedEventArgs e)
+        {
+
+        }
     }
 }

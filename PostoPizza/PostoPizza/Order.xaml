@@ -8,16 +8,18 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Order">
 
-    <Grid>
-        <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
-            <StackPanel x:Name="OrderLists" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Orientation="Horizontal">
-                
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" SizeChanged="resizeOrder">
+        <ScrollViewer x:Name="OrderListsScroll" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" PanningMode="Both" ScrollViewer.VerticalScrollBarVisibility="Hidden" RenderTransformOrigin="0.5,0.5">
+            <StackPanel Background="#FF323232">
+                <Border x:Name="orderBorder" Padding="15">
+                    <StackPanel x:Name="OrderLists" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Bottom" Width="Auto" Orientation="Horizontal"/>
+                </Border>
+                <StackPanel Height="Auto" RenderTransformOrigin="0.497,0.503" VerticalAlignment="Bottom">
+                    <Button Content="Send Order(s)" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="29" Width="Auto" Background="#FFEFEDCC" FontFamily="Century Gothic" Click="Button_Click" FontWeight="Bold"/>
+                    <Button Content="Signal Server To Pay" VerticalAlignment="Stretch" Height="28" Background="#FFEFEDCC" FontFamily="Century Gothic" FontWeight="Bold"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
-                <Button Content="Send Order(s)"></Button>
-                <Button Content="Signal Server To Pay"></Button>
-            </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
 
     </Grid>
 </Page>

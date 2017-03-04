@@ -29,6 +29,15 @@ namespace PostoPizza
             new string[] {"Saturday", "15% off tasting menus"},
             new string[] {"Sunday", "1/2 price pizza"}
         };
+
+        string[][] happyHour = new string[][]
+        {
+            new string[] {"To Drink", "pints of beer 5\nbottles of wine half price"},
+            new string[] {"To Eat", "sicilian olives 6\njoe's nuts 6\ntuscan hummus 6\nbrussels sprouts 6"},
+            new string[] {"Served Per Piece", "meatball 2.50 /each\narancini 2.50 /each\nbeef crudo 2.50 /each\nravioli 2.50 /each\nperogie 2.50 / each"},
+            new string[] {"Benny Apertivo", "antipasti plate 9"}
+        };
+
         public Specials()
         {
             InitializeComponent();
@@ -39,22 +48,36 @@ namespace PostoPizza
                 it.Description.Text = specials[i][1];
                 specialsList.Children.Add(it);
             }
+            for (int i = 0; i < happyHour.Length; i++)
+            {
+                SpecialItem it_2 = new SpecialItem();
+                it_2.Title.Content = happyHour[i][0];
+                it_2.Description.Text = happyHour[i][1];
+                happyHourList.Children.Add(it_2);
+            }
         }
         private void resize(object sender, SizeChangedEventArgs e)
         {
             leftScroller.Width = this.ActualWidth / 2;
             rightScroller.Width = this.ActualWidth / 2;
+            happyHourList.Margin = new Thickness(0, this.ActualHeight * 0.06, 0, 0);
             if (this.ActualHeight > 500)
             {
                 for (int i = 0; i < specials.Length; i++)
                 {
                     SpecialItem it = specialsList.Children[i] as SpecialItem;
-                    //it.Height = this.ActualHeight / specials.Length;
                     it.Title.FontSize = this.ActualHeight * 0.04;
                     it.Title.Padding = new Thickness(this.ActualHeight * 0.01);
                     it.Description.FontSize = this.ActualHeight * 0.03;
                     it.Description.Padding = new Thickness(this.ActualHeight * 0.01);
-
+                }
+                for (int i = 0; i < happyHour.Length; i++)
+                {
+                    SpecialItem it_2 = happyHourList.Children[i] as SpecialItem;
+                    it_2.Title.FontSize = this.ActualHeight * 0.04;
+                    it_2.Title.Padding = new Thickness(this.ActualHeight * 0.01);
+                    it_2.Description.FontSize = this.ActualHeight * 0.03;
+                    it_2.Description.Padding = new Thickness(this.ActualHeight * 0.01);
                 }
             }
             
