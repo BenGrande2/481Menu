@@ -15,13 +15,25 @@
             <RowDefinition Height="133*"/>
         </Grid.RowDefinitions>
         <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Height="Auto" Grid.RowSpan="3" VerticalAlignment="Stretch" Width="Auto" Margin="-6,-2,-13,-2" >
-            <TabItem x:Name="foodTab" Header="Food" FontFamily="Century Gothic" FontWeight="Bold">
+            <TabItem x:Name="foodTab" Header="Food" FontFamily="Century Gothic" FontWeight="Bold" Height="21" VerticalAlignment="Top" Foreground="Black" BorderBrush="#FFACACAC" IsSelected="True">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
                 <Grid Background="#FFE5E5E5" Margin="0,0,-7,0">
                     <Frame x:Name="frame3" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Food.xaml"/>
-                    <Ellipse x:Name="foodE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="-132,-51,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="263" Grid.ColumnSpan="2" StrokeThickness="2"/>
+                    <Ellipse x:Name="foodE" HorizontalAlignment="Left" Height="90" Margin="-132,-51,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="263" Grid.ColumnSpan="2" StrokeThickness="2" Fill="White"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="drinkTab" Header="Drinks" FontFamily="Century Gothic" FontWeight="Bold">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
                 <Grid Background="#FFE5E5E5">
                     <Frame x:Name="frame1" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Drink.xaml"/>
                     <Ellipse x:Name="drinkE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="126,-60,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="137" StrokeThickness="2"/>

@@ -8,15 +8,15 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
 
-        <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
-            <Label x:Name="orderNum" Content="Order Number" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="alreadyOrderedLabel" Content="Already Ordered" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Margin="10,0,-10,0">
+            <Label x:Name="orderNum" Content="Order Number&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
+            <Label x:Name="alreadyOrderedLabel" Content="&#xD;&#xA;Already Ordered&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
             <StackPanel x:Name="AlreadyOrdered" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
             </StackPanel>
-            <Label x:Name="notOrderedLabel" Content="Not Ordered" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="notOrderedLabel" Content="&#xD;&#xA;Not Ordered Yet&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
             <StackPanel x:Name="NotOrderedYet" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
             </StackPanel>
-            <Label x:Name="total" Content="Total: $43" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="total" Content="&#xD;&#xA;Total: $43&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic"/>
         </StackPanel>
 
     </Grid>
