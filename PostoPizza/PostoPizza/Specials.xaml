@@ -1,0 +1,21 @@
+﻿<Page x:Class="PostoPizza.Specials"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PostoPizza"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Specials" SizeChanged="resize">
+
+    <Grid>
+        <ScrollViewer PanningMode="Both" x:Name="leftScroller" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="151" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
+            <StackPanel x:Name="specialsList" Height="Auto" Width="Auto"/>
+        </ScrollViewer>
+        <ScrollViewer PanningMode="Both" x:Name="rightScroller" HorizontalAlignment="Right" Height="Auto" VerticalAlignment="Stretch" Width="151" VerticalScrollBarVisibility="Hidden" Background="#FFFFFF29">
+            <StackPanel x:Name="happyHourList" Height="Auto" Width="Auto"/>
+        </ScrollViewer>
+
+
+    </Grid>
+</Page>

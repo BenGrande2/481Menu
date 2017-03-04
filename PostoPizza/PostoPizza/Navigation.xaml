@@ -1,0 +1,44 @@
+﻿<Page x:Class="PostoPizza.Navigation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PostoPizza"
+      mc:Ignorable="d" 
+      d:DesignHeight="300"
+      Title="Navigation" Width="Auto" SizeChanged="resizeTabs">
+
+    <Grid Margin="0,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="133*"/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Height="Auto" Grid.RowSpan="3" VerticalAlignment="Stretch" Width="Auto" Margin="-6,-2,-13,-2" >
+            <TabItem x:Name="foodTab" Header="Food" FontFamily="Century Gothic" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-7,0">
+                    <Frame x:Name="frame3" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Food.xaml"/>
+                    <Ellipse x:Name="foodE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="-132,-51,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="263" Grid.ColumnSpan="2" StrokeThickness="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="drinkTab" Header="Drinks" FontFamily="Century Gothic" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Frame x:Name="frame1" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Drink.xaml"/>
+                    <Ellipse x:Name="drinkE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="126,-60,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="137" StrokeThickness="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="specTab" Header="Specials" FontWeight="Bold" FontFamily="Century Gothic">
+                <Grid Background="#FFE5E5E5">
+                    <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Specials.xaml"/>
+                    <Ellipse x:Name="specE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="256,-60,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="136" StrokeThickness="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="orderTab" Header="Order" FontFamily="Century Gothic" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Frame x:Name="frame2" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Order.xaml"/>
+                    <Ellipse x:Name="orderE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="388,-49,-150,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="294" StrokeThickness="2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>
