@@ -40,7 +40,11 @@ namespace PostoPizza
 
         private void resizeOrder(object sender, SizeChangedEventArgs e)
         {
-
+            orderBorder.Padding = new Thickness(this.ActualHeight * 0.05);
+            sendOrdBtn.FontSize = signalBtn.FontSize = this.ActualHeight * 0.03;
+            sendOrdBtn.Height = signalBtn.Height = this.ActualHeight * 0.08;
+            OrderList orderChild = OrderLists.Children[0] as OrderList;
+            orderChild.orderNum.FontSize = orderChild.alreadyOrderedLabel.FontSize = orderChild.notOrderedLabel.FontSize = orderChild.total.FontSize = this.ActualHeight * 0.03;
         }
     }
 }

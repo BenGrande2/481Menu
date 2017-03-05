@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
 
-        <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Margin="10,0,-10,0">
+        <StackPanel x:Name="orderListStack" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Margin="10,0,-10,0" SizeChanged="resizeOrderlist">
             <Label x:Name="orderNum" Content="Order Number&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
             <Label x:Name="alreadyOrderedLabel" Content="&#xD;&#xA;Already Ordered&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
             <StackPanel x:Name="AlreadyOrdered" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
