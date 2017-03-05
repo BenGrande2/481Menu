@@ -22,7 +22,7 @@ namespace PostoPizza
     {
         string[][] specials = new string[][] {
             new string[] {"Monday", "Industry Night"},
-            new string[] {"Tuesday", "Comfort food. Think Sunday dinner on a Tuesday night.\n Bottles of Lambrusco for $25!"},
+            new string[] {"Tuesday", "Comfort food. Think Sunday dinner on a Tuesday night.\nBottles of Lambrusco for $25!"},
             new string[] {"Wednesday", "Date Night: Join us for a tasting menu for $35 per person. Feature $30 bottle of wine."},
             new string[] {"Thursday", "1/2 price cocktails. $6 for two ounce cocktails."},
             new string[] {"Friday", "Glasses of Sam's house-made Sangria for $8! Jugs for $35."},

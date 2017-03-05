@@ -29,5 +29,15 @@ namespace PostoPizza.Images
         {
             (Window.GetWindow(this) as MainWindow).openMenu();
         }
+
+        private void resizeHome(object sender, SizeChangedEventArgs e)
+        {
+            image.Width = this.ActualWidth * 0.9;
+            image.Height = this.ActualHeight * 0.8;
+            label.FontSize = this.ActualHeight * 0.06;
+            label.Margin = new Thickness(0, 0, 0, this.ActualHeight * 0.175);
+            button.FontSize = this.ActualHeight * 0.03;
+            label1.FontSize = this.ActualHeight * 0.03;
+        }
     }
 }
