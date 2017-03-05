@@ -12,7 +12,23 @@ namespace PostoPizza
     {
         public String category;
         public String title;
-        public double price;
+        public double Price;
+        public string Ingredients
+        {
+            set
+            {
+                
+                string[] ingredientsArray = value.Split(',');
+                ingredients = new Ingredient[ingredientsArray.Length];
+               
+                for (int j = 0; j < ingredientsArray.Length; j++)
+                {
+                    Ingredient ing = new Ingredient(ingredientsArray[j]);
+                    ingredients[j] = ing;
+
+                }
+            }
+        }
         public Ingredient[] ingredients;
         public string imgRef;
         public BitmapImage getImage()
@@ -30,16 +46,20 @@ namespace PostoPizza
         {
             this.category = category;
             this.title = title;
-            this.price = price;
+            this.Price = price;
             this.ingredients = ingredients;
             this.imgRef = img;
         }
         public MenuItem(string title, double price)
         {
             this.title = title;
-            this.price = price;
+            this.Price = price;
             this.category = "";
             this.imgRef = "";
+        }
+        public MenuItem()
+        {
+
         }
     }
 }

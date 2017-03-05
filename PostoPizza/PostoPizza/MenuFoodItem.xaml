@@ -7,7 +7,6 @@
              mc:Ignorable="d" Height="Auto" Width="Auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <Grid  Height="Auto" Width="Auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <StackPanel x:Name="sp" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
-            <Label x:Name="Title" Content="Label"   FontWeight="Bold" Foreground="#efedcc" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Padding="10" VerticalAlignment="Stretch" Background="{x:Null}"/>
             <TextBox x:Name="Description" TextWrapping="Wrap" Text="TextBox" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Padding="5" IsEnabled="False" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </StackPanel>
 

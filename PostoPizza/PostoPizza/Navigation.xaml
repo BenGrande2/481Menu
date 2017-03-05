@@ -52,5 +52,6 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <Ellipse x:Name="CallServerEllipse" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="109" Margin="-248,108,0,0" Grid.RowSpan="3" Stroke="Black" VerticalAlignment="Top" Width="186"/>
     </Grid>
 </Page>
