@@ -13,9 +13,9 @@ namespace PostoPizza
         public string imgRef;
         public BitmapImage getImage()
         {
-            if (this.imgRef != null)
+            if (this.name != null)
             {
-                Uri uri = new Uri("Images/Ingredients/" + this.imgRef, UriKind.Relative);
+                Uri uri = new Uri("Images/Ingredients/" + this.name.Trim()+".png", UriKind.Relative);
                 return new BitmapImage(uri);
             }
             return null;
@@ -29,6 +29,10 @@ namespace PostoPizza
         {
             this.name = name;
             this.imgRef = img;
+        }
+        public override string ToString()
+        {
+            return name;
         }
     }
 }

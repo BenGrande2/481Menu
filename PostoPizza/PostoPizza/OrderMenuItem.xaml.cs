@@ -24,7 +24,7 @@ namespace PostoPizza
         {
             set
             {
-                this.label.Content = value.title + " - " + value.price;
+                this.label.Content = value.title + " - " + value.Price;
             }
         }
        

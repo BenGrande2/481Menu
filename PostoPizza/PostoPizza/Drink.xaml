@@ -6,15 +6,9 @@
       xmlns:local="clr-namespace:PostoPizza"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Food">
-    <Grid SizeChanged="resizeFood">
-        <ScrollViewer PanningMode="Both" x:Name="leftScroller" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
-            <Border Padding="15">
-                <StackPanel x:Name="menuList" Height="Auto" Width="Auto" Orientation="Horizontal">
-                    <StackPanel x:Name="menuList1" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <StackPanel x:Name="menuList2" Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                </StackPanel>
-            </Border>
-        </ScrollViewer>
+      Title="Drink">
+
+    <Grid>
+        
     </Grid>
 </Page>

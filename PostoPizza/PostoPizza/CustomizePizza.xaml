@@ -1,0 +1,32 @@
+﻿<Page x:Class="PostoPizza.CustomizePizza"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PostoPizza"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="CustomizePizza">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Background="#FF323232">
+            <Label Content="Customization" Padding="20px" Foreground="#FFEFEDCC" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"></Label>
+            <Border Padding="20" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+                <StackPanel Height="Auto" Background="#FF323232" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid>
+                        <Label Content="Quantity" Width="Auto" HorizontalAlignment="Left"></Label>
+                        <Label Content="Topping" Width="Auto" HorizontalAlignment="Center"></Label>
+                        <Label Content="Remove" Width="Auto" HorizontalAlignment="Right"></Label>
+                    </Grid>
+                    <Button Content="+Add Topping" Background="{x:Null}" BorderBrush="{x:Null}"></Button>
+                    <StackPanel x:Name="Ingredients">
+                        
+                    </StackPanel>
+                    
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

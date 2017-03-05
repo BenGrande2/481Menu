@@ -21,6 +21,7 @@ namespace PostoPizza
     /// </summary>
     public partial class Navigation : Page
     {
+        
         public Navigation()
         {
             InitializeComponent();
@@ -55,7 +56,9 @@ namespace PostoPizza
             orderE.Height = 3 * tenthHeight;
             orderE.Margin = new Thickness(quarterWidth*3, -tenthHeight * 1.6, 0, 0);
 
-
+            CallServerEllipse.Width = quarterWidth * 2;
+            CallServerEllipse.Height = 4 * tenthHeight;
+            CallServerEllipse.Margin = new Thickness(quarterWidth * 3, this.ActualHeight- (tenthHeight * 1.6), 0, 0);
 
         }
     }

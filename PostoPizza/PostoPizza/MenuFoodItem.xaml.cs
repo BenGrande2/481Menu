@@ -20,6 +20,26 @@ namespace PostoPizza
     /// </summary>
     public partial class MenuFoodItem : UserControl
     {
+        private MenuItem _menuitem;
+        public MenuItem menuItem {
+            set
+            {
+                if (value.ingredients != null)
+                {
+                    string ings = string.Join<Ingredient>(", ", value.ingredients);
+                    Description.Text = value.title + " " + ings + " " + value.Price;
+                }
+                else
+                {
+                    Description.Text = value.title;
+                }
+                _menuitem = value;
+            }
+            get
+            {
+                return _menuitem;
+            }
+        }
         public MenuFoodItem()
         {
             InitializeComponent();
