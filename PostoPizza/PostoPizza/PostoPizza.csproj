@@ -35,9 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System-Web-Helpers.dll.1.0.0\lib\Net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CustomizePizza.xaml.cs">
+      <DependentUpon>CustomizePizza.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Drink.xaml.cs">
       <DependentUpon>Drink.xaml</DependentUpon>
     </Compile>
@@ -64,6 +75,12 @@
       <DependentUpon>Food.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ingredient.cs" />
+    <Compile Include="IngredientModifier.xaml.cs">
+      <DependentUpon>IngredientModifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFoodItem.xaml.cs">
+      <DependentUpon>MenuFoodItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuItem.cs" />
     <Compile Include="Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
@@ -80,6 +97,10 @@
     <Compile Include="Specials.xaml.cs">
       <DependentUpon>Specials.xaml</DependentUpon>
     </Compile>
+    <Page Include="CustomizePizza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Drink.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngredientModifier.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,6 +132,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MenuFoodItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Navigation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +182,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +194,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PostoLogo.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\sausage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\salami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\smoked pancetta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\calabrese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\pizzaBase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuPostoPizza\stockPizza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
