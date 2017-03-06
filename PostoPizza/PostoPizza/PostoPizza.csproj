@@ -195,7 +195,9 @@
   <ItemGroup>
     <Resource Include="Images\PostoLogo.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Menu\stockPizza.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Ingredients\sausage.png" />
   </ItemGroup>
