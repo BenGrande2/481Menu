@@ -31,7 +31,7 @@ namespace PostoPizza
                 }
                 else
                 {
-                    Description.Text = value.title;
+                    Description.Text = value.title+" "+value.Price;
                 }
                 _menuitem = value;
             }
