@@ -61,7 +61,8 @@ namespace PostoPizza
                         mf.MouseDoubleClick += Mf_MouseDoubleClick;
                    
                     }
-                    mf.MouseDown += Mf_MouseDown;
+                    mf.MouseRightButtonDown += Mf_MouseDown;
+                    //mf.MouseDown += Mf_MouseDown;
                     menuList1.Children.Add(mf);
                     
                 }

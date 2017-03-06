@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="addToOrderPopup.xaml.cs">
+      <DependentUpon>addToOrderPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomizePizza.xaml.cs">
       <DependentUpon>CustomizePizza.xaml</DependentUpon>
     </Compile>
@@ -91,12 +94,19 @@
     <Compile Include="OrderMenuItem.xaml.cs">
       <DependentUpon>OrderMenuItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PizzaAddon.xaml.cs">
+      <DependentUpon>PizzaAddon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialItem.xaml.cs">
       <DependentUpon>SpecialItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Specials.xaml.cs">
       <DependentUpon>Specials.xaml</DependentUpon>
     </Compile>
+    <Page Include="addToOrderPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CustomizePizza.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +161,10 @@
     <Page Include="OrderMenuItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PizzaAddon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SpecialItem.xaml">
       <SubType>Designer</SubType>
@@ -215,6 +229,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MenuPostoPizza\stockPizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minusButton.png" />
+    <Resource Include="Images\plusButton.png" />
+    <Resource Include="Images\xButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
