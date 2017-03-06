@@ -38,6 +38,7 @@ namespace PostoPizza
             foodE.Width = quarterWidth*2;
             foodE.Height = 3 * tenthHeight;
             foodE.Margin = new Thickness(-quarterWidth, -tenthHeight*1.6 , 0, 0);
+            foodTab.FontSize = this.ActualHeight * 0.04;
 
            
 
@@ -45,18 +46,19 @@ namespace PostoPizza
             drinkE.Width = quarterWidth+4;
             drinkE.Height = 3 * tenthHeight;
             drinkE.Margin = new Thickness(quarterWidth-2, -tenthHeight * 1.6, 0, 0);
+            drinkTab.FontSize = this.ActualHeight * 0.04;
 
             specTab.Width = quarterWidth;
             specE.Width = quarterWidth+4;
             specE.Height = 3 * tenthHeight;
             specE.Margin = new Thickness(2*quarterWidth - 2, -tenthHeight * 1.6, 0, 0);
+            specTab.FontSize = this.ActualHeight * 0.04;
 
             orderTab.Width = quarterWidth;
             orderE.Width = quarterWidth * 2;
             orderE.Height = 3 * tenthHeight;
             orderE.Margin = new Thickness(quarterWidth*3, -tenthHeight * 1.6, 0, 0);
-
-            
+            orderTab.FontSize = this.ActualHeight * 0.04;
 
             CallServerEllipse.Width = quarterWidth * 2;
             CallServerEllipse.Height = 4 * tenthHeight;
@@ -65,6 +67,7 @@ namespace PostoPizza
             CallServerButton.Width = quarterWidth;
             CallServerButton.Height = tenthHeight;
             CallServerButton.Margin = new Thickness(quarterWidth * 3, this.ActualHeight - (tenthHeight), 0, 0);
+            CallServerButton.FontSize = this.ActualHeight * 0.04;
         }
     }
 }
