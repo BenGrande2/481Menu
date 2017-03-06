@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PostoPizza.Images"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="500"
+      d:DesignHeight="600" d:DesignWidth="1000"
       Title="HomeScreen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto">
 
     <Grid Background="#FFF5F5F3" MouseDown="openMenu" SizeChanged="resizeHome">

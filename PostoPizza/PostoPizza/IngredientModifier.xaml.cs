@@ -27,6 +27,8 @@ namespace PostoPizza
             {
                 ingImg.Source = value.getImage();
                 ingName.Content = value.name;
+                Color color = (Color)ColorConverter.ConvertFromString("#FFEFEDCC");
+                ingName.Foreground = new System.Windows.Media.SolidColorBrush(color);
                 _ingredient = value;
             }
             get

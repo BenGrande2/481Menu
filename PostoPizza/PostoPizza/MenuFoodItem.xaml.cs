@@ -28,11 +28,13 @@ namespace PostoPizza
                 {
                     string ings = string.Join<Ingredient>(", ", value.ingredients);
                     Description.Text = value.title + " " + ings + " " + value.Price;
+                    Image.Source = value.getImage();
                 }
                 else
                 {
                     Description.Text = value.title;
                 }
+                
                 _menuitem = value;
             }
             get
