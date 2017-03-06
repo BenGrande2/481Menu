@@ -19,7 +19,7 @@
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                        <GradientStop Color="#FFEFEDCC" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
                 <Grid Background="#FFE5E5E5" Margin="0,0,-7,0">
@@ -31,7 +31,7 @@
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                        <GradientStop Color="#FFEFEDCC" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
                 <Grid Background="#FFE5E5E5">
@@ -40,21 +40,33 @@
                 </Grid>
             </TabItem>
             <TabItem x:Name="specTab" Header="Specials" FontWeight="Bold" FontFamily="Century Gothic">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFEFEDCC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
                 <Grid Background="#FFE5E5E5">
                     <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Specials.xaml"/>
                     <Ellipse x:Name="specE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="256,-60,0,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="136" StrokeThickness="2"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="orderTab" Header="Order" FontFamily="Century Gothic" FontWeight="Bold">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFEFEDCC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
                 <Grid Background="#FFE5E5E5">
                     <Frame x:Name="frame2" Content="Frame" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Source="Order.xaml"/>
                     <Ellipse x:Name="orderE" Fill="White" HorizontalAlignment="Left" Height="90" Margin="388,-49,-150,0" Stroke="#FFACACAC" VerticalAlignment="Top" Width="294" StrokeThickness="2"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        
+
         <Ellipse x:Name="CallServerEllipse" Fill="White" HorizontalAlignment="Left" Height="109" Margin="58,147,-66,0" Grid.RowSpan="3" Stroke="Black" VerticalAlignment="Top" Width="186"/>
         <Button x:Name="CallServerButton" Background="White" BorderThickness="1,0,1,1" HorizontalAlignment="Left" Grid.RowSpan="3"  VerticalAlignment="Top" Content="Signal Server" FontFamily="Century Gothic" FontWeight="Bold"></Button>
-        
+
     </Grid>
 </Page>

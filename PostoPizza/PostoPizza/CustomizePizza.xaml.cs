@@ -65,5 +65,15 @@ namespace PostoPizza
             AddButton.Width = qWidth;
             ServerButton.Width = qWidth;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PizzaAddon addMenu = new PizzaAddon();
+            addMenu.HorizontalAlignment = HorizontalAlignment.Center;
+            addMenu.VerticalAlignment = VerticalAlignment.Center;
+            addMenu.Width = 400;
+            addMenu.Height = 500;
+            Page.Children.Add(addMenu);
+        }
     }
 }

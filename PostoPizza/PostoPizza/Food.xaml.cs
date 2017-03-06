@@ -61,12 +61,32 @@ namespace PostoPizza
                         mf.MouseDoubleClick += Mf_MouseDoubleClick;
                    
                     }
+                    mf.MouseDown += Mf_MouseDown;
                     menuList1.Children.Add(mf);
                     
                 }
                 
             }
   
+        }
+
+        private void Mf_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle fadeout = new Rectangle();
+            fadeout.Width = ActualWidth;
+            fadeout.Height = ActualHeight;
+            fadeout.HorizontalAlignment = HorizontalAlignment.Left;
+            fadeout.VerticalAlignment = VerticalAlignment.Top;
+            Color color = (Color)ColorConverter.ConvertFromString("#7F323232");
+            fadeout.Fill = new System.Windows.Media.SolidColorBrush(color);
+            Page.Children.Add(fadeout);
+
+            addToOrderPopup addMenu = new addToOrderPopup();
+            addMenu.HorizontalAlignment = HorizontalAlignment.Center;
+            addMenu.VerticalAlignment = VerticalAlignment.Center;
+            addMenu.Width = 400;
+            addMenu.Height = 100;
+            Page.Children.Add(addMenu);
         }
 
         private void Mf_MouseDoubleClick(object sender, MouseButtonEventArgs e)

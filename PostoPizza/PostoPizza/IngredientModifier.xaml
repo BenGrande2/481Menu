@@ -9,15 +9,36 @@
     <Grid SizeChanged="resize">
 
         <StackPanel Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Horizontal">
-            <StackPanel x:Name="Stack1">
-                <Button Content="+" Background="#FFF5F5F3" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16"></Button>
-                <Button Content="-" Background="#FFF5F5F3" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16"></Button>
-            </StackPanel>
+
+           
+                
+            
+                <StackPanel x:Name="Stack1" VerticalAlignment="Center">
+                    <Button Width="30" Height="30" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/plusButton.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Width="30" Height="30" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16" Foreground="{x:Null}" BorderBrush="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/minusButton.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            
             <StackPanel x:Name="Stack2">
                 <Image x:Name="ingImg" Height="75" Width="Auto"></Image>
                 <Label x:Name="ingName" FontFamily="Century Gothic" HorizontalAlignment="Center"></Label>
             </StackPanel>
-            <Button Content="X" Height="Auto" x:Name="Stack3" Background="#FFF5F5F3" FontWeight="Bold" FontFamily="Century Gothic"></Button>
+            <Border Padding="20">
+                <StackPanel>
+                    <Button Height="40" Width="40" x:Name="Stack3" FontWeight="Bold" FontFamily="Century Gothic" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/xButton.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>
         </StackPanel>
 
     </Grid>
