@@ -35,7 +35,7 @@ namespace PostoPizza
                 Uri uri = new Uri("Images/Ingredients/pizzaBase.png", UriKind.Relative);
                 BitmapImage pizzaBase = new BitmapImage(uri);
                 Image img = new Image();
-                img.Height = 200;
+                img.Height = 100;
 
                 img.Source = pizzaBase;
                 Ingredients.Children.Add(img);
@@ -49,6 +49,21 @@ namespace PostoPizza
         public CustomizePizza()
         {
             InitializeComponent();
+        }
+
+        private void resize(object sender, SizeChangedEventArgs e)
+        {
+            double tenthHeight = ActualHeight / 20;
+            HelpButton.Height = tenthHeight;
+            CancelButton.Height = tenthHeight;
+            AddButton.Height = tenthHeight;
+            ServerButton.Height = tenthHeight;
+
+            double qWidth = ActualWidth / 4;
+            HelpButton.Width = qWidth;
+            CancelButton.Width = qWidth;
+            AddButton.Width = qWidth;
+            ServerButton.Width = qWidth;
         }
     }
 }

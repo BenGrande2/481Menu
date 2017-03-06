@@ -56,10 +56,15 @@ namespace PostoPizza
             orderE.Height = 3 * tenthHeight;
             orderE.Margin = new Thickness(quarterWidth*3, -tenthHeight * 1.6, 0, 0);
 
+            
+
             CallServerEllipse.Width = quarterWidth * 2;
             CallServerEllipse.Height = 4 * tenthHeight;
-            CallServerEllipse.Margin = new Thickness(quarterWidth * 3, this.ActualHeight- (tenthHeight * 1.6), 0, 0);
+            CallServerEllipse.Margin = new Thickness(quarterWidth * 3, this.ActualHeight- (tenthHeight * 3), 0, 0);
 
+            CallServerButton.Width = quarterWidth;
+            CallServerButton.Height = tenthHeight;
+            CallServerButton.Margin = new Thickness(quarterWidth * 3, this.ActualHeight - (tenthHeight), 0, 0);
         }
     }
 }

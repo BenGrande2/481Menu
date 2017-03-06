@@ -12,9 +12,11 @@
             <Border Padding="15">
                 <StackPanel x:Name="menuList" Height="Auto" Width="Auto" Orientation="Horizontal">
                     <StackPanel x:Name="menuList1" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <StackPanel x:Name="menuList2" Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                    <StackPanel x:Name="menuList2" Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    </StackPanel>
                 </StackPanel>
             </Border>
         </ScrollViewer>
+        <TextBox VerticalAlignment="Center" Margin="0, 0, 50, 0" Text="Tap picture&#xD;&#xA;to add to order &#xD;&#xA;-----------------------------&#xD;&#xA;Tap + hold &#xD;&#xA; to view and customize!" HorizontalAlignment="Right" Background="{x:Null}" Foreground="#FFEFEDCC" FontFamily="Century Gothic" Focusable="False" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" IsHitTestVisible="False" AllowDrop="False" FontSize="22" TextAlignment="Center"/>
     </Grid>
 </Page>

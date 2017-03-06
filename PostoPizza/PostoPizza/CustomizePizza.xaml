@@ -6,19 +6,19 @@
       xmlns:local="clr-namespace:PostoPizza"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="CustomizePizza">
+      Title="CustomizePizza" SizeChanged="resize">
 
     <Grid>
         <StackPanel HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Background="#FF323232">
-            <Label Content="Customization" Padding="20px" Foreground="#FFEFEDCC" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20"></Label>
+            <Label Content="Customization" Padding="20px" Foreground="#FFEFEDCC" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic"></Label>
             <Border Padding="20" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
                 <StackPanel Height="Auto" Background="#FF323232" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <Grid>
-                        <Label Content="Quantity" Width="Auto" HorizontalAlignment="Left"></Label>
-                        <Label Content="Topping" Width="Auto" HorizontalAlignment="Center"></Label>
-                        <Label Content="Remove" Width="Auto" HorizontalAlignment="Right"></Label>
+                        <Label Content="Quantity" Width="Auto" HorizontalAlignment="Left" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="16" FontWeight="Bold"></Label>
+                        <Label Content="Topping(s)" Width="Auto" HorizontalAlignment="Center" FontFamily="Century Gothic" Foreground="#FFEFEDCC" FontSize="16" FontWeight="Bold"></Label>
+                        <Label Content="Remove" Width="Auto" HorizontalAlignment="Right" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="16" FontWeight="Bold"></Label>
                     </Grid>
-                    <Button Content="+Add Topping" Background="{x:Null}" BorderBrush="{x:Null}"></Button>
+                    <Button Content="&#xD;&#xA;+ Add Topping&#xD;&#xA;" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Century Gothic" Foreground="#FFEFEDCC" FontSize="14" FontWeight="Bold"></Button>
                     <StackPanel x:Name="Ingredients">
                         
                     </StackPanel>
@@ -27,6 +27,13 @@
             </Border>
 
         </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Stretch" Width="Auto">
+            <Button x:Name="HelpButton" Content="Help (?)" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic"></Button>
+            <Button x:Name="CancelButton" Content="Cancel Customization" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic"></Button>
+            <Button x:Name="AddButton" Content="Add To Order" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic"></Button>
+            <Button x:Name="ServerButton" Content="Signal Server" HorizontalAlignment="Stretch" Width="Auto"></Button>
+        </StackPanel>
+       
 
     </Grid>
 </Page>

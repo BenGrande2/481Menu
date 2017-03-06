@@ -14,10 +14,10 @@
                 <Button Content="-" Background="#FFF5F5F3" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16"></Button>
             </StackPanel>
             <StackPanel x:Name="Stack2">
-                <Image x:Name="ingImg" Height="100" Width="Auto"></Image>
-                <Label x:Name="ingName"></Label>
+                <Image x:Name="ingImg" Height="75" Width="Auto"></Image>
+                <Label x:Name="ingName" FontFamily="Century Gothic" HorizontalAlignment="Center"></Label>
             </StackPanel>
-            <Button Content="X" x:Name="Stack3" Background="#FFF5F5F3" FontWeight="Bold" FontFamily="Century Gothic"></Button>
+            <Button Content="X" Height="Auto" x:Name="Stack3" Background="#FFF5F5F3" FontWeight="Bold" FontFamily="Century Gothic"></Button>
         </StackPanel>
 
     </Grid>

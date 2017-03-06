@@ -35,7 +35,7 @@ namespace PostoPizza
         {
             if (imgRef != null)
             {
-                Uri uri = new Uri("Images/MenuItems/" + this.imgRef, UriKind.Relative);
+                Uri uri = new Uri("Images/Menu/" + this.imgRef, UriKind.Relative);
                 return new BitmapImage(uri);
             }
             return null;
