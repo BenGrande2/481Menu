@@ -235,6 +235,44 @@
     <Resource Include="Images\plusButton.png" />
     <Resource Include="Images\xButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\BlackKaleSalad.jpg" />
+    <Resource Include="Images\Menu\BrusselsSprouts.jpg" />
+    <Resource Include="Images\Menu\Cheddar.jpg" />
+    <Resource Include="Images\Menu\DuckProsciutto.jpg" />
+    <Resource Include="Images\Menu\JoesNuts.jpg" />
+    <Resource Include="Images\Menu\PorkLonza.png" />
+    <Resource Include="Images\Menu\Riopelle.jpg" />
+    <Resource Include="Images\Menu\RomaineSalad.jpg" />
+    <Resource Include="Images\Menu\SicilianOlives.jpg" />
+    <Resource Include="Images\Menu\SpinachSalad.jpg" />
+    <Resource Include="Images\Menu\SwordfishBresaola.jpg" />
+    <Resource Include="Images\Menu\TigerBlue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\BonterraBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\BeefTarTar.jpg" />
+    <Resource Include="Images\Menu\LambMeatballs.jpg" />
+    <Resource Include="Images\Menu\Mussels.jpg" />
+    <Resource Include="Images\Menu\Perogies.jpg" />
+    <Resource Include="Images\Menu\Pizza1.jpg" />
+    <Resource Include="Images\Menu\Pizza10.jpg" />
+    <Resource Include="Images\Menu\Pizza2.jpg" />
+    <Resource Include="Images\Menu\Pizza3.jpg" />
+    <Resource Include="Images\Menu\Pizza4.JPG" />
+    <Resource Include="Images\Menu\Pizza5.png" />
+    <Resource Include="Images\Menu\Pizza6.PNG" />
+    <Resource Include="Images\Menu\Pizza7.png" />
+    <Resource Include="Images\Menu\Pizza8.jpg" />
+    <Resource Include="Images\Menu\Pizza9.jpg" />
+    <Resource Include="Images\Menu\SpaghettiBolognese.jpg" />
+    <Resource Include="Images\Menu\TuscanHummus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\HumbleSquid.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

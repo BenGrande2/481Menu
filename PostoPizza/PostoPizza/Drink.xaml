@@ -12,7 +12,6 @@
             <Border Padding="15">
                 <StackPanel x:Name="menuList" Height="Auto" Width="Auto" Orientation="Horizontal">
                     <StackPanel x:Name="menuList1" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <StackPanel x:Name="menuList2" Height="Auto" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                 </StackPanel>
             </Border>
         </ScrollViewer>
