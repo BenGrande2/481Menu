@@ -30,7 +30,7 @@ namespace PostoPizza
             InitializeComponent();
             menu = JsonConvert.DeserializeObject<MenuList>(jsonArray);
 
-            for (int i = 0; i < menu.Menu.Length - 4; i++)
+            for (int i = 0; i < menu.Menu.Length; i++)
             {
                 Label header = new Label();
                 header.Content = menu.Menu[i].Name;
@@ -51,7 +51,7 @@ namespace PostoPizza
                 }
 
             }
-            for (int i = menu.Menu.Length - 4; i < menu.Menu.Length; i++)
+            /*for (int i = menu.Menu.Length - 4; i < menu.Menu.Length; i++)
             {
                 Label header = new Label();
                 header.Content = menu.Menu[i].Name;
@@ -66,7 +66,7 @@ namespace PostoPizza
                     mf.menuItem = category[j];
                     menuList2.Children.Add(mf);
                 }
-            }
+            }*/
         }
 
         private void resizeDrink(object sender, SizeChangedEventArgs e)
@@ -94,7 +94,7 @@ namespace PostoPizza
             }
 
 
-            menuList2.Margin = new Thickness(this.ActualHeight * 0.05, this.ActualHeight * 0.06, 0, 0);
+            /* menuList2.Margin = new Thickness(this.ActualHeight * 0.05, this.ActualHeight * 0.06, 0, 0);
             i = 0;
             while (i < menuList2.Children.Count)
             {
@@ -114,7 +114,7 @@ namespace PostoPizza
                 }
 
                 i++;
-            }
+            }*/
         }
     }
 }

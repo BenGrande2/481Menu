@@ -24,11 +24,11 @@ namespace PostoPizza
         public MenuItem menuItem {
             set
             {
+                Image.Source = value.getImage();
                 if (value.ingredients != null)
                 {
                     string ings = string.Join<Ingredient>(", ", value.ingredients);
                     Description.Text = value.title + " " + ings + " " + value.Price;
-                    Image.Source = value.getImage();
                 }
                 else
                 {
