@@ -273,6 +273,79 @@
   <ItemGroup>
     <Resource Include="Images\Menu\HumbleSquid.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\2010LongviewThePieceShiraz.jpg" />
+    <Resource Include="Images\Menu\2010TolaniPicconeroIgt.PNG" />
+    <Resource Include="Images\Menu\2010UltraVioletCabernetSauv.PNG" />
+    <Resource Include="Images\Menu\2010ZenatoAmaroneDoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\BokischGarnachaBlanca.jpg" />
+    <Resource Include="Images\Menu\BonannoCabernetSauvignon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\C.gDiArieZinfandel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Cocktail.jpg" />
+    <Resource Include="Images\Menu\ColterenzioPinotGrigio.jpg" />
+    <Resource Include="Images\Menu\CuvaisonPinotNoir.jpg" />
+    <Resource Include="Images\Menu\DandyBrewingCompanyUnderworldOysterStout.jpg" />
+    <Resource Include="Images\Menu\DeschutesFreshSqueezedIpa.jpg" />
+    <Resource Include="Images\Menu\DonnafugataAnthilia.jpg" />
+    <Resource Include="Images\Menu\DonnafugataAnthilia2.jpg" />
+    <Resource Include="Images\Menu\DonnaOlimpiaTagetoRosso.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\FourGracesPinotBlanc.jpg" />
+    <Resource Include="Images\Menu\G.dVajraLangheRosso.jpg" />
+    <Resource Include="Images\Menu\GoatLockerPaleSessionAle.jpg" />
+    <Resource Include="Images\Menu\HarviestounOldEngineOil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\KendallJacksonSauvBlanc.jpg" />
+    <Resource Include="Images\Menu\LagrimasDeGracianoRioja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\LaSpinettaVermentino.jpg" />
+    <Resource Include="Images\Menu\LesCassagnesDeLaNerthe.png" />
+    <Resource Include="Images\Menu\LighthouseShipwreckIpa.jpg" />
+    <Resource Include="Images\Menu\LocalFlavourOfTheMonth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Parallel49CraftLager.jpg" />
+    <Resource Include="Images\Menu\Parallel49Wobblypop.jpg" />
+    <Resource Include="Images\Menu\PascalJolivetSancere.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\PhillipsBreweryBlueBuck.jpg" />
+    <Resource Include="Images\Menu\PhillipsElectricUnicorn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\PommiesDryAppleCider.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\PratelloRiesling.jpg" />
+    <Resource Include="Images\Menu\QuenardChigin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\SaintSidoine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\StuhlmullerChardonnay.jpg" />
+    <Resource Include="Images\Menu\SuenoTempranillo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\TolainiAlPasso.jpg" />
+    <Resource Include="Images\Menu\ToolShedRedRage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\VillaArcenoChiantiClassico.PNG" />
+    <Resource Include="Images\Menu\VillageSqueezeLemonBerryHelles.PNG" />
+    <Resource Include="Images\Menu\WildRoseBreweryVelvetFog.png" />
+    <Resource Include="Images\Menu\YukonRedAmberAle.png" />
+    <Resource Include="Images\Menu\Zonin.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
