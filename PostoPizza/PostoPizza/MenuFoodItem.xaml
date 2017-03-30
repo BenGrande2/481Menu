@@ -7,10 +7,10 @@
              mc:Ignorable="d" Height="Auto" Width="Auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <Grid  Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Border BorderThickness="1" BorderBrush="#FFEFEDCC">
-        <StackPanel x:Name="sp" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Orientation="Horizontal" Margin="10">
-            <TextBox x:Name="Description" TextWrapping="Wrap" Text="TextBox" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Padding="5" IsEnabled="False" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                <Image x:Name="Image"></Image>
-            </StackPanel>
+        <DockPanel x:Name="sp" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Margin="10">
+                <TextBox x:Name="Description" TextWrapping="Wrap" Text="TextBox" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Padding="5" IsEnabled="False" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <Image x:Name="Image" HorizontalAlignment="Right"/>
+            </DockPanel>
         </Border>
 
     </Grid>

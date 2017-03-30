@@ -8,9 +8,9 @@
              d:DesignHeight="100" d:DesignWidth="400">
     <Grid Background="#FFF5F5F3" SizeChanged="resize" VerticalAlignment="Center">
         <StackPanel Width="Auto" HorizontalAlignment="Stretch" Height="165" VerticalAlignment="Top" Margin="0,0,0,-65">
-            <Label x:Name="label" Content="ADDED TO ORDER!"  Width="Auto" HorizontalAlignment="Center" Height="41" VerticalAlignment="Stretch" FontFamily="Century Gothic" FontSize="20" FontWeight="Bold" Margin="108,0"/>
+            <Label x:Name="label" Content="ADDED TO ORDER!"  Width="Auto" HorizontalAlignment="Center" Height="41" VerticalAlignment="Stretch" FontFamily="Century Gothic" FontSize="20" FontWeight="Bold" Margin="108,0" />
             <StackPanel Orientation="Horizontal"  Width="Auto" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Stretch">
-                <Button Content="CONTINUE BROWSING"  Width="235" HorizontalAlignment="Stretch" Height="45" VerticalAlignment="Stretch" FontFamily="Century Gothic" FontSize="20" FontWeight="Bold" Background="#FFEFEDCC" Foreground="#FF323232"/>
+                <Button Content="CONTINUE BROWSING"  Width="235" HorizontalAlignment="Stretch" Height="45" VerticalAlignment="Stretch" FontFamily="Century Gothic" FontSize="20" FontWeight="Bold" Background="#FFEFEDCC" Foreground="#FF323232" Click="Button_Click"/>
                 <Button Content="GO TO ORDER"  Width="153" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" FontFamily="Century Gothic" FontSize="20" FontWeight="Bold" Background="#FFEFEDCC" Foreground="#FF323232"/>
             </StackPanel>
         </StackPanel>
