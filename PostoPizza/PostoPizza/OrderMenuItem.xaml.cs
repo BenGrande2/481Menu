@@ -24,7 +24,7 @@ namespace PostoPizza
         {
             set
             {
-                this.label.Content = value.title + " - " + value.Price;
+                this.label.Content = value.title + " - " + Math.Round(value.Price,2).ToString("0.00");
             }
         }
        

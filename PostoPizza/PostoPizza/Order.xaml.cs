@@ -33,9 +33,11 @@ namespace PostoPizza
             OrderLists.Children.Add(addOrder);
         }
 
+        //Send order button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            OrderList orderList = OrderLists.Children[0] as OrderList;
+            orderList.sendOrder();
         }
 
         private void resizeOrder(object sender, SizeChangedEventArgs e)
