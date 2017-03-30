@@ -16,7 +16,7 @@
             <Label x:Name="notOrderedLabel" Content="&#xD;&#xA;Not Ordered Yet&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
             <StackPanel x:Name="NotOrderedYet" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
             </StackPanel>
-            <Label x:Name="total" Content="&#xD;&#xA;Total: $43&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic"/>
+            <Label x:Name="total" Content="Total: " HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic"/>
         </StackPanel>
 
     </Grid>
