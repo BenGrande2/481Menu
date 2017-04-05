@@ -95,10 +95,8 @@ namespace PostoPizza
         {
             if (!isCalled)
             {
-                SolidColorBrush brush = new SolidColorBrush();
-                brush.Color = Color.FromRgb(255, 255, 0);
-                CallServerButton.Background = brush;
-                CallServerEllipse.Fill = brush;
+                CallServerButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFEFEDC"));
+                CallServerEllipse.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFEFEDC"));
                 isCalled = true;
             }
             else
