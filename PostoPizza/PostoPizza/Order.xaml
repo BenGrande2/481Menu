@@ -16,7 +16,7 @@
                 </Border>
                 <StackPanel x:Name="orderBtns" Height="Auto" RenderTransformOrigin="0.497,0.503" VerticalAlignment="Stretch" Orientation="Horizontal">
                     <Button x:Name="sendOrdBtn" Content="Send Order(s)" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="29" Width="Auto" Background="#FFEFEDCC" FontFamily="Century Gothic" Click="Button_Click" FontWeight="Bold"/>
-                    <Button x:Name="signalBtn" Content="Signal Server To Pay" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="29" Background="#FFEFEDCC" FontFamily="Century Gothic" FontWeight="Bold"/>
+                    <Button x:Name="signalBtn" Content="Signal Server To Pay" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="29" Background="#FFEFEDCC" FontFamily="Century Gothic" FontWeight="Bold" Click="signalBtn_Click"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

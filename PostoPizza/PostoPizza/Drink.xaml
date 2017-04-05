@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Drink">
-    <Grid SizeChanged="resizeDrink">
+    <Grid x:Name="Page" SizeChanged="resizeDrink">
         <ScrollViewer PanningMode="Both" x:Name="leftScroller" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
             <Border Padding="15">
                 <StackPanel x:Name="menuList" Height="Auto" Width="Auto" Orientation="Horizontal">

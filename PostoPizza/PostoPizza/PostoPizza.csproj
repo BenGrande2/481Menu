@@ -97,6 +97,9 @@
     <Compile Include="PizzaAddon.xaml.cs">
       <DependentUpon>PizzaAddon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SelectOrderPopup.xaml.cs">
+      <DependentUpon>SelectOrderPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialItem.xaml.cs">
       <DependentUpon>SpecialItem.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="SelectOrderPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SpecialItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,18 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Menu\stockPizza.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Ingredients\sausage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Ingredients\salami.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Ingredients\smoked pancetta.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Ingredients\calabrese.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Ingredients\pizzaBase.png" />
@@ -349,6 +344,40 @@
   <ItemGroup>
     <Resource Include="Images\Menu\BlackKaleSalad2.jpg" />
     <Resource Include="Images\Menu\Pizza10-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\almond pesto.png" />
+    <Resource Include="Images\Ingredients\apple.png" />
+    <Resource Include="Images\Ingredients\arugula.png" />
+    <Resource Include="Images\Ingredients\basil.png" />
+    <Resource Include="Images\Ingredients\calabrese.png" />
+    <Resource Include="Images\Ingredients\capers.png" />
+    <Resource Include="Images\Ingredients\chicken.png" />
+    <Resource Include="Images\Ingredients\crème fraiche.png" />
+    <Resource Include="Images\Ingredients\fig.png" />
+    <Resource Include="Images\Ingredients\fior di latte.png" />
+    <Resource Include="Images\Ingredients\fresno chillies.png" />
+    <Resource Include="Images\Ingredients\frisee.png" />
+    <Resource Include="Images\Ingredients\garlic.png" />
+    <Resource Include="Images\Ingredients\goat cheese.png" />
+    <Resource Include="Images\Ingredients\gorgonzola.png" />
+    <Resource Include="Images\Ingredients\grana padano.png" />
+    <Resource Include="Images\Ingredients\leek.png" />
+    <Resource Include="Images\Ingredients\lemon.png" />
+    <Resource Include="Images\Ingredients\pancetta.png" />
+    <Resource Include="Images\Ingredients\pineapple.png" />
+    <Resource Include="Images\Ingredients\potato.png" />
+    <Resource Include="Images\Ingredients\prosciutto.png" />
+    <Resource Include="Images\Ingredients\radicchio.png" />
+    <Resource Include="Images\Ingredients\red pepper.png" />
+    <Resource Include="Images\Ingredients\rosemarry.png" />
+    <Resource Include="Images\Ingredients\salami.png" />
+    <Resource Include="Images\Ingredients\Sausage.png" />
+    <Resource Include="Images\Ingredients\smoked pancetta.png" />
+    <Resource Include="Images\Ingredients\smoked salmon.png" />
+    <Resource Include="Images\Ingredients\spinnach shallot.png" />
+    <Resource Include="Images\Ingredients\tomato.png" />
+    <Resource Include="Images\Ingredients\wild mushroom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

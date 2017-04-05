@@ -24,7 +24,7 @@ namespace PostoPizza
     {
         MenuList menu;
         string jsonArray = "{ 'Menu':[{'Name':'Bubbles 6 oz G/B','MenuItems':[{Title:'zonin', 'imgRef':'Zonin.jpg', Price:12.00}]},{'Name':'Rosé 5 oz G/B','MenuItems':[{Title:'saint sidoine', 'imgRef':'SaintSidoine.jpg', Price:10.00}]},{'Name':'White 5 oz G/B','MenuItems':[{Title:'donnafugata, anthilia', 'imgRef':'DonnafugataAnthilia2.jpg', Price:10.00},{Title:'stuhlmuller, chardonnay','imgRef':'StuhlmullerChardonnay.jpg', Price:16.00},{Title:'quenard, chigin classique','imgRef':'QuenardChigin.jpg', Price:13.00},{Title:'la spinetta, vermentino','imgRef':'LaSpinettaVermentino.jpg', Price:13.00},{Title:'four graces, pinot blanc','imgRef':'FourGracesPinotBlanc.jpg', Price:16.00},{Title:'bokisch, garnacha blanca','imgRef':'BokischGarnachaBlanca.jpg', Price:13.00},{Title:'kendall jackson, sauv blanc','imgRef':'KendallJacksonSauvBlanc.jpg', Price:11.00},{Title:'pascal jolivet, sancere','imgRef':'PascalJolivetSancere.jpeg', Price:16.00},{Title:'colterenzio, pinot grigio','imgRef':'ColterenzioPinotGrigio.jpg', Price:13.00}]},{'Name':'Red 5 oz G/B','MenuItems':[{Title:'donna olimpia, tageto rosso', 'imgRef':'DonnaOlimpiaTagetoRosso.PNG', Price:9.00},{Title:'lagrimas de graciano rioja','imgRef':'LagrimasDeGracianoRioja.jpg', Price:13.00},{Title:'bonanno, cabernet sauvignon','imgRef':'BonannoCabernetSauvignon.jpg', Price:14.00},{Title:'villa arceno, chianti classico','imgRef':'VillaArcenoChiantiClassico.PNG', Price:14.00},{Title:'cuvaison, pinot noir','imgRef':'CuvaisonPinotNoir.jpg', Price:19.00},{Title:'tolaini, al passo','imgRef':'TolainiAlPasso.jpg', Price:13.00},{Title:'sueno, tempranillo','imgRef':'SuenoTempranillo.jpg', Price:12.00},{Title:'c.g di arie zinfandel','imgRef':'C.gDiArieZinfandel.PNG', Price:16.00},{Title:'les cassagnes de la nerthe','imgRef':'LesCassagnesDeLaNerthe.png', Price:15.00},{Title:'g.d vajra langhe rosso','imgRef':'G.dVajraLangheRosso.jpg', Price:14.00},{Title:'2010 tolani, picconero','imgRef':'2010TolaniPicconeroIgt.PNG', Price:220.00}]},{'Name':'Riserva','MenuItems':[{Title:'2010 longview \"the piece\" shiraz', 'imgRef':'2010LongviewThePieceShiraz.jpg', Price:150.00},{Title:'2010 zenato amarone, doc','imgRef':'2010ZenatoAmaroneDoc.png', Price:114.00},{Title:'2010 ultra violet cabernet sauv','imgRef':'2010UltraVioletCabernetSauv.PNG', Price:102.00}]},{'Name':'Cocktails 2 oz','MenuItems':[{Title:'1.', Ingredients:'prosecco, muddled orange, prickly pear equineox', 'imgRef':'Cocktail.jpg', Price:12.00},{Title:'2.',Ingredients:'eau claire gin, mint, elderflower water, lemon, lime juice, ginger, bitters','imgRef':'Cocktail.jpg', Price:12.00},{Title:'3.',Ingredients:'averna, oranges, lemons, ginger ale, ginger beer','imgRef':'Cocktail.jpg', Price:12.00},{Title:'4.',Ingredients:'buffalo trace bourbon, chambord, pineapple, cranberry, bitters','imgRef':'Cocktail.jpg', Price:12.00},{Title:'5.',Ingredients:'aperol, hanger one vodka, mint, oranges, lemons and limes','imgRef':'Cocktail.jpg', Price:12.00},{Title:'6.',Ingredients:'amaretto, bourbon, lemon juice, egg white','imgRef':'Cocktail.jpg', Price:12.00},{Title:'7.',Ingredients:'pimms, lemon & lime juice, aranciata, ginger beer','imgRef':'Cocktail.jpg', Price:12.00},{Title:'8.',Ingredients:'bourbon, aperol, amaro nonino, lemon juice','imgRef':'Cocktail.jpg', Price:12.00},{Title:'9.',Ingredients:'postos negroni','imgRef':'Cocktail.jpg', Price:12.00},{Title:'10.',Ingredients:'leave it to the bartender','imgRef':'Cocktail.jpg', Price:12.00}]},{'Name':'Bottled Beer','MenuItems':[{Title:'deschutes, fresh squeezed ipa', 'imgRef':'DeschutesFreshSqueezedIpa.jpg', Price:10.00},{Title:'phillips, electric unicorn','imgRef':'PhillipsElectricUnicorn.jpg', Price:8.00},{Title:'pommies,dry apple cider','imgRef':'PommiesDryAppleCider.jpg', Price:13.00},{Title:'parallel 49, wobbly pop','imgRef':'Parallel49Wobblypop.jpg', Price:8.00},{Title:'harviestoun,old engine oil','imgRef':'HarviestounOldEngineOil.jpg', Price:10.00},{Title:'yukon,red amber ale','imgRef':'YukonRedAmberAle.png', Price:6.00},{Title:'lighthouse,shipwreck ipa','imgRef':'LighthouseShipwreckIpa.jpg', Price:9.00},{Title:'village,squeeze,lemon berry helles','imgRef':'VillageSqueezeLemonBerryHelles.PNG', Price:9.00},{Title:'Dandy Brewing company, Underworld oyster stout','imgRef':'DandyBrewingCompanyUnderworldOysterStout.jpg', Price:12.00},{Title:'Wild Rose Brewery,Velvet Fog','imgRef':'WildRoseBreweryVelvetFog.png', Price:9.00}]},{'Name':'Can of the Moment','MenuItems':[{Title:'goatlocker pale session ale', 'imgRef':'GoatLockerPaleSessionAle.jpg', Price:10.00}]},{'Name':'Draft 20 oz','MenuItems':[{Title:'local flavour of the month', 'imgRef':'LocalFlavourOfTheMonth.jpg', Price:8.50},{Title:'phillips brewery,bluebuck','imgRef':'PhillipsBreweryBlueBuck.jpg', Price:8.50}]}]}";
-
+        public Order order;
         public Drink()
         {
             InitializeComponent();
@@ -44,9 +44,9 @@ namespace PostoPizza
                 for (int j = 0; j < category.Length; j++)
                 {
                     MenuFoodItem mf = new MenuFoodItem();
-
+                    category[j].type = "Drink";
                     mf.menuItem = category[j];
-
+                    mf.MouseRightButtonDown += Mf_MouseDown;
                     menuList1.Children.Add(mf);
                 }
 
@@ -68,7 +68,28 @@ namespace PostoPizza
                 }
             }*/
         }
+        public void Mf_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle fadeout = new Rectangle();
+            fadeout.Width = ActualWidth;
+            fadeout.Height = ActualHeight;
+            fadeout.HorizontalAlignment = HorizontalAlignment.Left;
+            fadeout.VerticalAlignment = VerticalAlignment.Top;
+            Color color = (Color)ColorConverter.ConvertFromString("#7F323232");
+            fadeout.Fill = new System.Windows.Media.SolidColorBrush(color);
+            Page.Children.Add(fadeout);
 
+            addToOrderPopup addMenu = new addToOrderPopup();
+            addMenu.HorizontalAlignment = HorizontalAlignment.Center;
+            addMenu.VerticalAlignment = VerticalAlignment.Center;
+            addMenu.Width = 400;
+            addMenu.Height = 100;
+            addMenu.order = order;
+            addMenu.Name = "AddMenu";
+            addMenu.food = (sender as MenuFoodItem).menuItem;
+            addMenu.cover = fadeout;
+            Page.Children.Add(addMenu);
+        }
         private void resizeDrink(object sender, SizeChangedEventArgs e)
         {
             menuList1.Margin = new Thickness(0, this.ActualHeight * 0.06, 0, 0);
@@ -116,6 +137,11 @@ namespace PostoPizza
 
                 i++;
             }*/
+        }
+        public Navigation nav;
+        public void changeToOrder()
+        {
+            nav.changeToOrder();
         }
     }
 }

@@ -23,7 +23,7 @@
             <CheckBox x:Name="tomato" Content="Tomato" HorizontalAlignment="Left" Margin="189,398,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="16"/>
             <CheckBox x:Name="gorgonzola" Content="Gorgonzola" HorizontalAlignment="Left" Margin="189,423,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="16"/>
             <CheckBox x:Name="calabrese" Content="Calabrese" HorizontalAlignment="Left" Margin="189,450,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="16"/>
-            <Button x:Name="button" Content="Add To Pizza" HorizontalAlignment="Left" Margin="63,34,0,0" VerticalAlignment="Top" Width="249" FontFamily="Century Gothic" Height="53" FontSize="16" Background="#FFEFEDCC"/>
+            <Button x:Name="button" Content="Add To Pizza" HorizontalAlignment="Left" Margin="63,34,0,0" VerticalAlignment="Top" Width="249" FontFamily="Century Gothic" Height="53" FontSize="16" Background="#FFEFEDCC" Click="button_Click"/>
             <!--proscuitto + anchovy + egg + truffle oil + arugula-->
         </Grid>
     </Border>

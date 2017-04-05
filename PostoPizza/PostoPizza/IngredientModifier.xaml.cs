@@ -20,6 +20,7 @@ namespace PostoPizza
     /// </summary>
     public partial class IngredientModifier : UserControl
     {
+        public CustomizePizza custom;
         private Ingredient _ingredient;
         public Ingredient ingredient
         {
@@ -48,6 +49,21 @@ namespace PostoPizza
             Stack1.Width = thirdWidth;
             Stack2.Width = thirdWidth;
             Stack3.Width = thirdWidth;
+        }
+        public void resize()
+        {
+            double thirdWidth = ActualWidth / 3;
+            Stack1.Width = thirdWidth;
+            Stack2.Width = thirdWidth;
+            Stack3.Width = thirdWidth;
+            if (Stack2.Height > ActualHeight)
+            {
+                Stack2.Height = ActualHeight;
+            }
+        }
+        private void Stack3_Click(object sender, RoutedEventArgs e)
+        {
+            custom.removeIng(this);
         }
     }
 }

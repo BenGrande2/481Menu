@@ -66,7 +66,7 @@
         </TabControl>
 
         <Ellipse x:Name="CallServerEllipse" Fill="White" HorizontalAlignment="Left" Height="109" Margin="58,147,-66,0" Grid.RowSpan="3" Stroke="Black" VerticalAlignment="Top" Width="186"/>
-        <Button x:Name="CallServerButton" Background="White" BorderThickness="1,0,1,1" HorizontalAlignment="Left" Grid.RowSpan="3"  VerticalAlignment="Top" Content="Signal Server" FontFamily="Century Gothic" FontWeight="Bold"></Button>
+        <Button x:Name="CallServerButton" Background="White" BorderThickness="1,0,1,1" HorizontalAlignment="Left" Grid.RowSpan="3"  VerticalAlignment="Top" Content="Signal Server" FontFamily="Century Gothic" FontWeight="Bold" Click="call_server"></Button>
 
     </Grid>
 </Page>

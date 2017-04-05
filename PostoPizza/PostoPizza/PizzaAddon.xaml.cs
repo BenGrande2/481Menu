@@ -20,9 +20,62 @@ namespace PostoPizza
     /// </summary>
     public partial class PizzaAddon : UserControl
     {
+        public CustomizePizza customize;
         public PizzaAddon()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            //(order.OrderLists.Children[0] as OrderList).addItem(food);
+            //customize.Page.Children.Remove(cover);
+            if (proscuitto.IsChecked == true)
+            {
+               
+                customize.addIngredient(new Ingredient("proscuitto"));
+            }
+            if (anchovy.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("anchovy"));     
+            }
+            if (egg.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("egg"));
+            }
+            if (truffleOil.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("truffle oil"));
+            }
+            if (Arugula.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("arugula"));
+            }
+            if (smoked_pancetta.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("smoked pancetta"));
+            }
+            if (sausage.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("sausage"));
+            }
+            if (salami.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("salami"));
+            }
+            if (tomato.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("tomato"));
+            }
+            if (gorgonzola.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("gorgonzola"));
+            }
+            if (calabrese.IsChecked == true)
+            {
+                customize.addIngredient(new Ingredient("calabrese"));
+            }
+            customize.Page.Children.Remove(this);
         }
     }
 }

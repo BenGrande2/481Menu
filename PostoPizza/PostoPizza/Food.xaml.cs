@@ -28,13 +28,14 @@ namespace PostoPizza
     {
         public MenuCategory[] Menu;
     }
+
     public partial class Food : Page
     {
 
         MenuList menu;
         string jsonArray = "{'Menu':[{'Name':'Small Bites','MenuItems':[{Title:'bonterra bread', Price: 3, 'imgRef':'BonterraBread.png'},{Title:'sicillian olives', 'imgRef':'SicilianOlives.jpg', Price: 6},{Title:'tuscan hummus', 'imgRef':'TuscanHummus.jpg', Price: 6},{Title:'brussel sprouts', 'imgRef':'BrusselsSprouts.jpg', Price: 6},{Title:'joes nuts', 'imgRef':'JoesNuts.jpg', Price: 6}]},{'Name':'Salads','MenuItems':[{Title:'spinach', 'imgRef':'SpinachSalad.jpg', Price: 11},{Title:'black kale', 'imgRef':'BlackKaleSalad2.jpg', Price: 13},{Title:'romaine', 'imgRef':'RomaineSalad.jpg', Price: 11}]},{'Name':'Cured Meats & Cheeses','MenuItems':[{Title:'ropelle', 'imgRef':'Riopelle.jpg', Price: 8},{Title:'tiger blue', 'imgRef':'TigerBlue.jpg', Price: 8},{Title:'cheddar', 'imgRef':'Cheddar.jpg', Price: 8},{Title:'pork lonza', 'imgRef':'PorkLonza.png', Price: 8},{Title:'duck prosciutto', 'imgRef':'DuckProsciutto.jpg', Price: 8},{Title:'swordfish bresaola', 'imgRef':'SwordfishBresaola.jpg', Price: 8}]},{'Name':'Small Plates','MenuItems':[{Title:'meatballs', 'imgRef':'LambMeatballs.jpg', Price: 10},{Title:'mussels', 'imgRef':'Mussels.jpg', Price: 13},{Title:'humble squid', 'imgRef':'HumbleSquid.jpg', Price: 10},{Title:'beef tar tar', 'imgRef':'BeefTarTar.jpg', Price: 14},{Title:'perogies', 'imgRef':'Perogies.jpg', Price: 12}]},{'Name':'Pizza','MenuItems':[{Title:'1.',Ingredients:'fior di latte, tomato, basil',Price:19.00,'imgRef':'Pizza1.jpg',},{Title:'2.',Ingredients:'potato, creme fraiche, leek, smoked pancetta',Price:21.00,'imgRef':'Pizza2.jpg',},{Title:'3.',Ingredients:'spinach, shallot, garlic, wild mushroom, grana padano',Price:21.00,'imgRef':'Pizza3.jpg',},{Title:'4.',Ingredients:'sausage, salami, smoked pancetta, calabrese',Price:22.00,'imgRef':'Pizza4.JPG',},{Title:'5.',Ingredients:'chicken, almond pesto, goat cheese, red peppers',Price:21.00,'imgRef':'Pizza5.png',},{Title:'6.',Ingredients:'sausage, apple, frisee, tomato',Price:21.00,'imgRef':'Pizza6.PNG',},{Title:'7.',Ingredients:'smoked salmon, leek, caper, creme fraiche, lemon',Price:24.00,'imgRef':'Pizza7.png',},{Title:'8.',Ingredients:'pineapple, gorgonzola, pancetta, fresno chilies',Price:21.00,'imgRef':'Pizza8.jpg',},{Title:'9.',Ingredients:'gorgonzola, fig, potato, radichio, rosemary',Price:23.00,'imgRef':'Pizza9.jpg',},{Title:'10.',Ingredients:'prosciutto, fior di latte, arugula, grana padano',Price:24.00,'imgRef':'Pizza10-2.jpg',}]},{'Name':'Taste of Posto',MenuItems:[{'Title':'WEEKLY TASTING MENU', Price: 49}]}]}";
-        
-        public Food()
+        public Order order;
+        public Food ()
         {
             
             InitializeComponent();
@@ -87,6 +88,10 @@ namespace PostoPizza
             addMenu.VerticalAlignment = VerticalAlignment.Center;
             addMenu.Width = 400;
             addMenu.Height = 100;
+            addMenu.order = order;
+            addMenu.Name = "AddMenu";
+            addMenu.food = (sender as MenuFoodItem).menuItem;
+            addMenu.cover = fadeout;
             Page.Children.Add(addMenu);
         }
 
@@ -99,7 +104,10 @@ namespace PostoPizza
                 Console.WriteLine("Double clicked1");
                 Frame parent = Parent as Frame;
                 CustomizePizza customize = new CustomizePizza();
+                customize.order = order;
                 customize.pizza = item.menuItem;
+                customize.nav = nav;
+                
                 NavigationService.Navigate(customize);
                 if (parent != null)
                 {
@@ -140,6 +148,11 @@ namespace PostoPizza
 
             menuList2.Margin = new Thickness(this.ActualHeight * 0.05, this.ActualHeight * 0.06, 0, 0);
             
+        }
+        public Navigation nav;
+        public void changeToOrder()
+        {
+            nav.changeToOrder();
         }
     }
 }

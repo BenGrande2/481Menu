@@ -44,7 +44,9 @@ namespace PostoPizza
                 for (int i = 0; i < alreadyOrderedList.Count; i++)
                 {
                     OrderMenuItem ord = new OrderMenuItem();
+                    ord.parentList = this;
                     ord.menuItem = alreadyOrderedList[i];
+                    ord.notOrderedYet = false;
                     AlreadyOrdered.Children.Add(ord);
                 }
 
@@ -54,9 +56,11 @@ namespace PostoPizza
             }
 
             OrderMenuItem or = new OrderMenuItem();
+            or.parentList = this;
             if (item != null)
             {
                 or.menuItem = item;
+                or.notOrderedYet = true;
                 NotOrderedYet.Children.Add(or);
             }
             //notOrderedList.Clear();
@@ -100,10 +104,17 @@ namespace PostoPizza
         {
             for(int i = 0; i < notOrderedList.Count; i++)
             {
+                
                 alreadyOrderedList.Add(notOrderedList[i]);
             }
 
             updateDisplay(true, null);
+        }
+        public void removeOrderItem(OrderMenuItem item)
+        {
+            _price -= item.menuItem.Price;
+            notOrderedList.Remove(item.menuItem);
+            NotOrderedYet.Children.Remove(item);
         }
     }
 }

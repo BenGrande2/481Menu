@@ -32,7 +32,7 @@
             </StackPanel>
             <Border Padding="20">
                 <StackPanel>
-                    <Button Height="40" Width="40" x:Name="Stack3" FontWeight="Bold" FontFamily="Century Gothic" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                    <Button Height="40" Width="40" x:Name="Stack3" FontWeight="Bold" FontFamily="Century Gothic" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Stack3_Click">
                         <Button.Background>
                             <ImageBrush ImageSource="Images/xButton.png" Stretch="Uniform"/>
                         </Button.Background>

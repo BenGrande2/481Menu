@@ -31,6 +31,8 @@ namespace PostoPizza
 
         private void resizeTabs(object sender, SizeChangedEventArgs e)
         {
+            Order ol = (frame2.Content as Order);
+            ol.nav = this;
             var quarterWidth = (tabControl.ActualWidth / 4)-1.5;
             var tenthHeight = (tabControl.ActualHeight / 20);
             foodTab.Width = quarterWidth;
@@ -39,7 +41,20 @@ namespace PostoPizza
             foodE.Height = 3 * tenthHeight;
             foodE.Margin = new Thickness(-quarterWidth, -tenthHeight*1.6 , 0, 0);
             foodTab.FontSize = this.ActualHeight * 0.04;
+            Food food = (frame3.Content as Food);
+            CustomizePizza pizza = (frame3.Content as CustomizePizza);
+            if (food != null)
+            {
+                (frame3.Content as Food).order = ol;
+                (frame3.Content as Food).nav = this;
 
+            }
+            else if (pizza != null)
+            {
+                (frame3.Content as CustomizePizza).order = ol;
+
+
+            }
            
 
             drinkTab.Width = tabControl.ActualWidth / 4;
@@ -47,6 +62,8 @@ namespace PostoPizza
             drinkE.Height = 3 * tenthHeight;
             drinkE.Margin = new Thickness(quarterWidth-2, -tenthHeight * 1.6, 0, 0);
             drinkTab.FontSize = this.ActualHeight * 0.04;
+            (frame1.Content as Drink).order = ol;
+            (frame1.Content as Drink).nav = this;
 
             specTab.Width = quarterWidth;
             specE.Width = quarterWidth+4;
@@ -68,6 +85,31 @@ namespace PostoPizza
             CallServerButton.Height = tenthHeight;
             CallServerButton.Margin = new Thickness(quarterWidth * 3, this.ActualHeight - (tenthHeight), 0, 0);
             CallServerButton.FontSize = this.ActualHeight * 0.04;
+        }
+        public void changeToOrder()
+        {
+            tabControl.SelectedIndex = 3;
+        }
+        public bool isCalled = false;
+        public void call_server(object sender, RoutedEventArgs e)
+        {
+            if (!isCalled)
+            {
+                SolidColorBrush brush = new SolidColorBrush();
+                brush.Color = Color.FromRgb(255, 255, 0);
+                CallServerButton.Background = brush;
+                CallServerEllipse.Fill = brush;
+                isCalled = true;
+            }
+            else
+            {
+                SolidColorBrush brush = new SolidColorBrush();
+                brush.Color = Color.FromRgb(255, 255, 255);
+                CallServerButton.Background = brush;
+                CallServerEllipse.Fill = brush;
+                isCalled = false;
+            }
+            
         }
     }
 }

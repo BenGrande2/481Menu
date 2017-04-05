@@ -29,8 +29,8 @@
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Stretch" Width="Auto">
             <Button x:Name="HelpButton" Content="Help (?)" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic"></Button>
-            <Button x:Name="CancelButton" Content="Cancel Customization" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic"></Button>
-            <Button x:Name="AddButton" Content="Add To Order" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic"></Button>
+            <Button x:Name="CancelButton" Content="Cancel Customization" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic" Click="CancelButton_Click"></Button>
+            <Button x:Name="AddButton" Content="Add To Order" HorizontalAlignment="Stretch" Width="Auto" FontFamily="Century Gothic" Click="AddButton_Click"></Button>
             <Button x:Name="ServerButton" Content="Signal Server" HorizontalAlignment="Stretch" Width="Auto"></Button>
         </StackPanel>
        
