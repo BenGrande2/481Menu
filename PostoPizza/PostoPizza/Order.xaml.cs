@@ -30,7 +30,18 @@ namespace PostoPizza
 
             Button addOrder = new Button();
             addOrder.Content = "+ Add Order";
+            addOrder.Click += addOrder_Click;
+           
             OrderLists.Children.Add(addOrder);
+        }
+        private void addOrder_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList order2 = new OrderList();
+            order2.orderNum.Content = "Order #2";
+
+            OrderLists.Children.Add(order2);
+            OrderLists.Children.Remove(sender as Button);
+
         }
 
         //Send order button
@@ -38,6 +49,11 @@ namespace PostoPizza
         {
             OrderList orderList = OrderLists.Children[0] as OrderList;
             orderList.sendOrder();
+            OrderList order2 = OrderLists.Children[1] as OrderList;
+            if (order2 != null)
+            {
+                order2.sendOrder();
+            }
         }
 
         private void resizeOrder(object sender, SizeChangedEventArgs e)
@@ -48,8 +64,21 @@ namespace PostoPizza
             sendOrdBtn.Width = this.ActualWidth / 3.5;
             signalBtn.Width = this.ActualWidth / 3;
             sendOrdBtn.Height = signalBtn.Height = this.ActualHeight * 0.08;
-            OrderList orderChild = OrderLists.Children[0] as OrderList;
-            orderChild.orderNum.FontSize = orderChild.alreadyOrderedLabel.FontSize = orderChild.notOrderedLabel.FontSize = orderChild.total.FontSize = this.ActualHeight * 0.03;
+            for (int j = 0; j<OrderLists.Children.Count; j++)
+            {
+                OrderList orderChild = OrderLists.Children[j] as OrderList;
+                if (orderChild != null)
+                {
+                    orderChild.orderNum.FontSize = orderChild.alreadyOrderedLabel.FontSize = orderChild.notOrderedLabel.FontSize = orderChild.total.FontSize = this.ActualHeight * 0.03;
+                }
+            }
+           // OrderList orderChild = OrderLists.Children[0] as OrderList;
+            
+        }
+        public Navigation nav;
+        private void signalBtn_Click(object sender, RoutedEventArgs e)
+        {
+            nav.call_server(null, null);
         }
     }
 }

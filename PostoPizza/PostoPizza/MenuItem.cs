@@ -10,6 +10,7 @@ namespace PostoPizza
     
     public class MenuItem
     {
+        public String type;
         public String category;
         public String title;
         public double Price;
