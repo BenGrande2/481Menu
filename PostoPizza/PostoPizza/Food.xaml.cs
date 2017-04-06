@@ -23,6 +23,7 @@ namespace PostoPizza
     {
         public string Name;
         public MenuItem[] MenuItems;
+        public string img;
     }
     public class MenuList
     {
@@ -33,7 +34,7 @@ namespace PostoPizza
     {
 
         MenuList menu;
-        string jsonArray = "{'Menu':[{'Name':'Small Bites','MenuItems':[{Title:'bonterra bread', Price: 3, 'imgRef':'BonterraBread.png'},{Title:'sicillian olives', 'imgRef':'SicilianOlives.jpg', Price: 6},{Title:'tuscan hummus', 'imgRef':'TuscanHummus.jpg', Price: 6},{Title:'brussel sprouts', 'imgRef':'BrusselsSprouts.jpg', Price: 6},{Title:'joes nuts', 'imgRef':'JoesNuts.jpg', Price: 6}]},{'Name':'Salads','MenuItems':[{Title:'spinach', 'imgRef':'SpinachSalad.jpg', Price: 11},{Title:'black kale', 'imgRef':'BlackKaleSalad2.jpg', Price: 13},{Title:'romaine', 'imgRef':'RomaineSalad.jpg', Price: 11}]},{'Name':'Cured Meats & Cheeses','MenuItems':[{Title:'ropelle', 'imgRef':'Riopelle.jpg', Price: 8},{Title:'tiger blue', 'imgRef':'TigerBlue.jpg', Price: 8},{Title:'cheddar', 'imgRef':'Cheddar.jpg', Price: 8},{Title:'pork lonza', 'imgRef':'PorkLonza.png', Price: 8},{Title:'duck prosciutto', 'imgRef':'DuckProsciutto.jpg', Price: 8},{Title:'swordfish bresaola', 'imgRef':'SwordfishBresaola.jpg', Price: 8}]},{'Name':'Small Plates','MenuItems':[{Title:'meatballs', 'imgRef':'LambMeatballs.jpg', Price: 10},{Title:'mussels', 'imgRef':'Mussels.jpg', Price: 13},{Title:'humble squid', 'imgRef':'HumbleSquid.jpg', Price: 10},{Title:'beef tar tar', 'imgRef':'BeefTarTar.jpg', Price: 14},{Title:'perogies', 'imgRef':'Perogies.jpg', Price: 12}]},{'Name':'Pizza','MenuItems':[{Title:'1.',Ingredients:'fior di latte, tomato, basil',Price:19.00,'imgRef':'Pizza1.jpg',},{Title:'2.',Ingredients:'potato, creme fraiche, leek, smoked pancetta',Price:21.00,'imgRef':'Pizza2.jpg',},{Title:'3.',Ingredients:'spinach, shallot, garlic, wild mushroom, grana padano',Price:21.00,'imgRef':'Pizza3.jpg',},{Title:'4.',Ingredients:'sausage, salami, smoked pancetta, calabrese',Price:22.00,'imgRef':'Pizza4.JPG',},{Title:'5.',Ingredients:'chicken, almond pesto, goat cheese, red peppers',Price:21.00,'imgRef':'Pizza5.png',},{Title:'6.',Ingredients:'sausage, apple, frisee, tomato',Price:21.00,'imgRef':'Pizza6.PNG',},{Title:'7.',Ingredients:'smoked salmon, leek, caper, creme fraiche, lemon',Price:24.00,'imgRef':'Pizza7.png',},{Title:'8.',Ingredients:'pineapple, gorgonzola, pancetta, fresno chilies',Price:21.00,'imgRef':'Pizza8.jpg',},{Title:'9.',Ingredients:'gorgonzola, fig, potato, radichio, rosemary',Price:23.00,'imgRef':'Pizza9.jpg',},{Title:'10.',Ingredients:'prosciutto, fior di latte, arugula, grana padano',Price:24.00,'imgRef':'Pizza10-2.jpg',}]},{'Name':'Taste of Posto',MenuItems:[{'Title':'WEEKLY TASTING MENU', Price: 49}]}]}";
+        string jsonArray = "{'Menu':[{'Name':'Small Bites','img':'appetizer_icon.png','MenuItems':[{Title:'bonterra bread', Price: 3, 'imgRef':'BonterraBread.png'},{Title:'sicillian olives', 'imgRef':'SicilianOlives.jpg', Price: 6},{Title:'tuscan hummus', 'imgRef':'TuscanHummus.jpg', Price: 6},{Title:'brussel sprouts', 'imgRef':'BrusselsSprouts.jpg', Price: 6},{Title:'joes nuts', 'imgRef':'JoesNuts.jpg', Price: 6}]},{'Name':'Salads','img':'salad_icon.png','MenuItems':[{Title:'spinach', 'imgRef':'SpinachSalad.jpg', Price: 11},{Title:'black kale', 'imgRef':'BlackKaleSalad2.jpg', Price: 13},{Title:'romaine', 'imgRef':'RomaineSalad.jpg', Price: 11}]},{'Name':'Cured Meats & Cheeses','img':'meat_and_cheese_icon.png','MenuItems':[{Title:'ropelle', 'imgRef':'Riopelle.jpg', Price: 8},{Title:'tiger blue', 'imgRef':'TigerBlue.jpg', Price: 8},{Title:'cheddar', 'imgRef':'Cheddar.jpg', Price: 8},{Title:'pork lonza', 'imgRef':'PorkLonza.png', Price: 8},{Title:'duck prosciutto', 'imgRef':'DuckProsciutto.jpg', Price: 8},{Title:'swordfish bresaola', 'imgRef':'SwordfishBresaola.jpg', Price: 8}]},{'Name':'Small Plates','img':'small_plate_icon.png','MenuItems':[{Title:'meatballs', 'imgRef':'LambMeatballs.jpg', Price: 10},{Title:'mussels', 'imgRef':'Mussels.jpg', Price: 13},{Title:'humble squid', 'imgRef':'HumbleSquid.jpg', Price: 10},{Title:'beef tar tar', 'imgRef':'BeefTarTar.jpg', Price: 14},{Title:'perogies', 'imgRef':'Perogies.jpg', Price: 12}]},{'Name':'Pizza','img':'pizza_icon.png','MenuItems':[{Title:'1.',Ingredients:'fior di latte, tomato, basil',Price:19.00,'imgRef':'Pizza1.jpg',},{Title:'2.',Ingredients:'potato, creme fraiche, leek, smoked pancetta',Price:21.00,'imgRef':'Pizza2.jpg',},{Title:'3.',Ingredients:'spinach, shallot, garlic, wild mushroom, grana padano',Price:21.00,'imgRef':'Pizza3.jpg',},{Title:'4.',Ingredients:'sausage, salami, smoked pancetta, calabrese',Price:22.00,'imgRef':'Pizza4.JPG',},{Title:'5.',Ingredients:'chicken, almond pesto, goat cheese, red peppers',Price:21.00,'imgRef':'Pizza5.png',},{Title:'6.',Ingredients:'sausage, apple, frisee, tomato',Price:21.00,'imgRef':'Pizza6.PNG',},{Title:'7.',Ingredients:'smoked salmon, leek, caper, creme fraiche, lemon',Price:24.00,'imgRef':'Pizza7.png',},{Title:'8.',Ingredients:'pineapple, gorgonzola, pancetta, fresno chilies',Price:21.00,'imgRef':'Pizza8.jpg',},{Title:'9.',Ingredients:'gorgonzola, fig, potato, radichio, rosemary',Price:23.00,'imgRef':'Pizza9.jpg',},{Title:'10.',Ingredients:'prosciutto, fior di latte, arugula, grana padano',Price:24.00,'imgRef':'Pizza10-2.jpg',}]},{'Name':'Taste of Posto',MenuItems:[{'Title':'WEEKLY TASTING MENU', Price: 49}]}]}";
         public Order order;
         public Food ()
         {
@@ -43,10 +44,12 @@ namespace PostoPizza
            
             for (int i = 0; i < menu.Menu.Length; i++)
             {
-                Label header = new Label();
-                header.Content = menu.Menu[i].Name;
+                AltLabel header = new AltLabel();
+                header.Title.Content = menu.Menu[i].Name;
+                header.imgRef = menu.Menu[i].img;
                 Color color = (Color)ColorConverter.ConvertFromString("#FFEFEDCC");
                 header.Foreground = new System.Windows.Media.SolidColorBrush(color);
+                header.Labelimg.Source = header.getImage();
                 
                 
                 menuList1.Children.Add(header);
@@ -126,11 +129,13 @@ namespace PostoPizza
             int i = 0;
             while (i < menuList1.Children.Count)
             {
-                Label header = menuList1.Children[i] as Label;
+                AltLabel header = menuList1.Children[i] as AltLabel;
                 if (header != null)
                 {
                     header.Padding = new Thickness(this.ActualHeight * 0.01);
                     header.FontSize = this.ActualHeight * 0.04;
+                    header.Labelimg.Width = this.ActualWidth * 0.20;
+                    header.Labelimg.Height = this.ActualHeight * 0.20;
                 }
                 
               

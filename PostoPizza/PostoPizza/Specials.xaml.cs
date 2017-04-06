@@ -79,8 +79,7 @@ namespace PostoPizza
                     it_2.Description.FontSize = this.ActualHeight * 0.03;
                     it_2.Description.Padding = new Thickness(this.ActualHeight * 0.01);
                 }
-            }
-            
+            }   
         }
     }
 }

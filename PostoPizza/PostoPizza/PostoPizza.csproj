@@ -106,6 +106,9 @@
     <Compile Include="Specials.xaml.cs">
       <DependentUpon>Specials.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AltLabel.xaml.cs">
+      <DependentUpon>AltLabel.xaml</DependentUpon>
+    </Compile>
     <Page Include="addToOrderPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -178,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Specials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AltLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -378,6 +385,29 @@
     <Resource Include="Images\Ingredients\spinnach shallot.png" />
     <Resource Include="Images\Ingredients\tomato.png" />
     <Resource Include="Images\Ingredients\wild mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\drunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\appetizer_icon.png" />
+    <Resource Include="Images\Menu\cocktail_icon.png" />
+    <Resource Include="Images\Menu\HappyHour.png" />
+    <Resource Include="Images\Menu\meat_and_cheese_icon.png" />
+    <Resource Include="Images\Menu\pint_icon.png" />
+    <Resource Include="Images\Menu\pizza_icon.png" />
+    <Resource Include="Images\Menu\salad_icon.png" />
+    <Resource Include="Images\Menu\small_plate_icon.png" />
+    <Resource Include="Images\Menu\wine_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\beer_can_icon.png" />
+    <Resource Include="Images\Menu\bottled_beer_icon.png" />
+    <Resource Include="Images\Menu\bubbles_wine_icon.png" />
+    <Resource Include="Images\Menu\red_wine_icon.png" />
+    <Resource Include="Images\Menu\riserva_wine_icon.png" />
+    <Resource Include="Images\Menu\rose_wine_icon.png" />
+    <Resource Include="Images\Menu\white_wine_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

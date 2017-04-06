@@ -4,18 +4,24 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PostoPizza"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      mc:Ignorable="d"
+      Height="Auto" Width="Auto"
       Title="Specials" SizeChanged="resize">
 
     <Grid>
-        <ScrollViewer PanningMode="Both" x:Name="leftScroller" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="151" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
-            <StackPanel x:Name="specialsList" Height="Auto" Width="Auto"/>
+        <DockPanel>
+        <ScrollViewer PanningMode="Both" x:Name="leftScroller" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="Auto" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
+            <StackPanel x:Name="specialsList" Height="Auto" Width="Auto" HorizontalAlignment="Left"/>
         </ScrollViewer>
-        <ScrollViewer PanningMode="Both" x:Name="rightScroller" HorizontalAlignment="Right" Height="Auto" VerticalAlignment="Stretch" Width="151" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
-            <StackPanel x:Name="happyHourList" Height="Auto" Width="Auto" Background="#FF323232" Margin="0, 10, 0, 0"/>
+        <ScrollViewer PanningMode="Both" x:Name="centerScroller" HorizontalAlignment="Left"  Height="Auto" VerticalAlignment="Stretch" Width="Auto" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
+                <StackPanel x:Name="happyHourList" Height="Auto" Width="Auto" HorizontalAlignment="Left"  Margin="0,0,30,0"/>
         </ScrollViewer>
-
+        <ScrollViewer PanningMode="Both" x:Name="rightScroller" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Stretch" Width="Auto" VerticalScrollBarVisibility="Hidden" Background="#FF323232">
+                <StackPanel x:Name="happyHourImage" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FF323232" Margin="0, 10, 0, 0">
+                    <Image x:Name="drunks" Source="Images/drunk.png" Height="700" Width="500" HorizontalAlignment="Right" Margin="50,0,0,0"></Image>
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
 
     </Grid>
 </Page>
