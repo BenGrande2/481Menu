@@ -27,11 +27,16 @@ namespace PostoPizza
         private List<MenuItem> notOrderedList = new List<MenuItem>();
 
         private double _price = 0;
-
+        public Order order;
         public OrderList()
         {
             InitializeComponent();
             updateDisplay(true, null);
+            resizeSides();
+            AlreadyOrdered.Width = ActualWidth*0.8;
+            NotOrderedYet.Width = ActualWidth * 0.8;
+           
+
         }
 
         private void updateDisplay(bool clear, MenuItem item)
@@ -63,22 +68,50 @@ namespace PostoPizza
                 or.notOrderedYet = true;
                 NotOrderedYet.Children.Add(or);
             }
+            if (order != null)
+            {
+                order.resizeSides();
+            }
+            resizeSides();
             //notOrderedList.Clear();
+            //resizeOrderlist(null, null);
+            AlreadyOrdered.Width = ActualWidth * 0.8;
+            NotOrderedYet.Width = ActualWidth * 0.8;
+        }
+        private void resizeSides()
+        {
+            if (NotOrderedYet.Children.Count == 0)
+            {
+                Chef.Height = AlreadyOrdered.ActualHeight;
+                Coil.Height = 0.0;
+            }
+            else
+            {
+                Chef.Height = AlreadyOrdered.ActualHeight;
+                Coil.Height = NotOrderedYet.ActualHeight;
+            }
+            
         }
 
         private void resizeOrderlist(object sender, SizeChangedEventArgs e)
         {
-            orderListStack.Width = alreadyOrderedLabel.ActualWidth * 1.5;
-            for (int i = 0; i < alreadyOrderedList.Count; i++)
+            /*orderListStack.Width = alreadyOrderedLabel.ActualWidth * 1.5;
+            AlreadyOrdered.Width = ActualWidth;
+            NotOrderedYet.Width = ActualWidth;
+            for (int i = 0; i < AlreadyOrdered.Children.Count; i++)
             {
                 OrderMenuItem or = AlreadyOrdered.Children[i] as OrderMenuItem;
+                or.Width = this.ActualWidth;
                 or.FontSize = this.ActualHeight * 0.03;
             }
-            for (int i = 0; i < notOrderedList.Count; i++)
+            for (int i = 0; i < NotOrderedYet.Children.Count; i++)
             {
                 OrderMenuItem or = NotOrderedYet.Children[i] as OrderMenuItem;
+                or.Width = this.ActualWidth;
                 or.FontSize = this.ActualHeight * 0.03;
             }
+            resizeSides();*/
+
         }
 
         /// <summary>
@@ -89,12 +122,13 @@ namespace PostoPizza
         {
             //add item to 
             notOrderedList.Add(item);
-
+            order.resizeSides();
             //update price
             _price += item.Price;
 
             //update display
             updateDisplay(false, item);
+            resizeSides();
         }
 
         /// <summary>
@@ -109,12 +143,14 @@ namespace PostoPizza
             }
 
             updateDisplay(true, null);
+            resizeSides();
         }
         public void removeOrderItem(OrderMenuItem item)
         {
             _price -= item.menuItem.Price;
             notOrderedList.Remove(item.menuItem);
             NotOrderedYet.Children.Remove(item);
+            resizeSides();
         }
     }
 }

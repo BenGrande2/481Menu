@@ -55,7 +55,7 @@ namespace PostoPizza
         {
             set
             {
-                this.label.Content = value.title + " - " + Math.Round(value.Price,2).ToString("0.00");
+                this.label.Text = value.title + " - " + Math.Round(value.Price,2).ToString("0.00");
                 this._menuItem = value;
             }
             get
@@ -79,6 +79,12 @@ namespace PostoPizza
             {
                 parentList.addItem(this.menuItem);
             }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            label.Width = ActualWidth * 0.8;
+            xButton.Width = ActualWidth * 0.2;
         }
     }
 }

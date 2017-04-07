@@ -56,6 +56,23 @@ namespace PostoPizza
                 happyHourList.Children.Add(it_2);
             }
         }
+        public Navigation nav;
+        private void goDrinks(object sender, TouchEventArgs e)
+        {
+            nav.tabControl.SelectedIndex = 1;
+        }
+        private void goDrinks(object sender, MouseButtonEventArgs e)
+        {
+            nav.tabControl.SelectedIndex = 1;
+        }
+        private void goFood(object sender, TouchEventArgs e)
+        {
+            nav.tabControl.SelectedIndex = 0;
+        }
+        private void goFood(object sender, MouseButtonEventArgs e)
+        {
+            nav.tabControl.SelectedIndex = 0;
+        }
         private void resize(object sender, SizeChangedEventArgs e)
         {
             leftScroller.Width = this.ActualWidth / 2;
@@ -70,6 +87,21 @@ namespace PostoPizza
                     it.Title.Padding = new Thickness(this.ActualHeight * 0.01);
                     it.Description.FontSize = this.ActualHeight * 0.03;
                     it.Description.Padding = new Thickness(this.ActualHeight * 0.01);
+
+                    if (i < 5)
+                    {
+                        it.TouchDown += goDrinks;
+                        it.MouseLeftButtonUp += goDrinks;
+                        it.MouseDown += goDrinks;
+                        it.MouseLeftButtonDown += goDrinks;
+                    }
+                    else
+                    {
+                        it.TouchDown += goFood;
+                        it.MouseLeftButtonUp += goFood;
+                        it.MouseDown += goFood;
+                        it.MouseLeftButtonDown += goFood;
+                    }
                 }
                 for (int i = 0; i < happyHour.Length; i++)
                 {
@@ -78,6 +110,21 @@ namespace PostoPizza
                     it_2.Title.Padding = new Thickness(this.ActualHeight * 0.01);
                     it_2.Description.FontSize = this.ActualHeight * 0.03;
                     it_2.Description.Padding = new Thickness(this.ActualHeight * 0.01);
+
+                    if (i == 0)
+                    {
+                        it_2.TouchDown += goDrinks;
+                        it_2.MouseLeftButtonUp += goDrinks;
+                        it_2.MouseDown += goDrinks;
+                        it_2.MouseLeftButtonDown += goDrinks;
+                    }
+                    else
+                    {
+                        it_2.TouchDown += goFood;
+                        it_2.MouseLeftButtonUp += goFood;
+                        it_2.MouseDown += goFood;
+                        it_2.MouseLeftButtonDown += goFood;
+                    }
                 }
             }   
         }

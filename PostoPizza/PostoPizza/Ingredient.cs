@@ -11,6 +11,9 @@ namespace PostoPizza
     {
         public string name;
         public string imgRef;
+        public int cost;
+        public bool mod;
+        public string quantity = "Regular";
         public BitmapImage getImage()
         {
             if (this.name != null)
@@ -24,11 +27,21 @@ namespace PostoPizza
         public Ingredient(string name)
         {
             this.name = name;
+            this.cost = 0;
+            this.mod = false;
+        }
+        public Ingredient(string name, int cost, bool mod)
+        {
+            this.name = name;
+            this.cost = cost;
+            this.mod = mod;
         }
         public Ingredient(string name, string img)
         {
             this.name = name;
             this.imgRef = img;
+            this.cost = 0;
+            this.mod = false;
         }
         public override string ToString()
         {

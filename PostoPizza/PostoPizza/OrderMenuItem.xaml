@@ -5,11 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PostoPizza"
              mc:Ignorable="d" Height="Auto" Width="216.934">
-    <Grid Height="Auto" VerticalAlignment="Top">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-        </Grid.RowDefinitions>
-        <Label x:Name="label" Content="Label" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="Auto" Foreground="#FFEFEDCC" FontFamily="Century Gothic" Grid.RowSpan="2"/>
-        <Button x:Name="xButton" Content="X" HorizontalAlignment="Left" Margin="169,0,0,0" VerticalAlignment="Top" Width="48" Height="35" Click="Button_Click"/>
+    <Grid Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,1,0" SizeChanged="Grid_SizeChanged">
+        
+        <DockPanel Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+            <TextBox x:Name="label" Text="Label" Background="Transparent" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Width="300" Foreground="#FFEFEDCC" FontSize="18" BorderBrush="Transparent" FontFamily="Century Gothic"/>
+            <Button x:Name="xButton" Content="X" FontSize="14" Width="48" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Stretch" Click="Button_Click"/>
+        </DockPanel>
+        
     </Grid>
 </UserControl>

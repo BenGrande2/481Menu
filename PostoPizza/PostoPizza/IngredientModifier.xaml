@@ -13,18 +13,22 @@
            
                 
             
-                <StackPanel x:Name="Stack1" VerticalAlignment="Center">
-                    <Button Width="30" Height="30" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Foreground="{x:Null}">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Images/plusButton.png"/>
-                        </Button.Background>
-                    </Button>
-                    <Button Width="30" Height="30" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16" Foreground="{x:Null}" BorderBrush="{x:Null}">
-                        <Button.Background>
-                            <ImageBrush ImageSource="Images/minusButton.png"/>
-                        </Button.Background>
-                    </Button>
-                </StackPanel>
+                <StackPanel x:Name="Stack1" VerticalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <Button Width="30" Height="30" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/plusButton.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="30" Height="30" FontFamily="Century Gothic" FontWeight="Bold" FontSize="16" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_1">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images/minusButton.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                    <Image Width="83" Height="30"  x:Name="quantityButton" Source="Images/RegularButton.png"></Image>
+                    
+            </StackPanel>
             
             <StackPanel x:Name="Stack2">
                 <Image x:Name="ingImg" Height="75" Width="Auto"></Image>

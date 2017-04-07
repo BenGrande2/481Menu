@@ -47,7 +47,9 @@ namespace PostoPizza
                     MenuFoodItem mf = new MenuFoodItem();
                     category[j].type = "Drink";
                     mf.menuItem = category[j];
-                    mf.MouseRightButtonDown += Mf_MouseDown;
+                    mf.MouseLeftButtonDown += Mf_MouseDown;
+                    mf.MouseUp += Mf_MouseDown;
+                    mf.TouchDown += Mf_TouchDown;
                     menuList1.Children.Add(mf);
                 }
 
@@ -68,6 +70,10 @@ namespace PostoPizza
                     menuList2.Children.Add(mf);
                 }
             }*/
+        }
+        public void Mf_TouchDown(object sender, TouchEventArgs e)
+        {
+            Mf_MouseDown(null, null);
         }
         public void Mf_MouseDown(object sender, MouseButtonEventArgs e)
         {

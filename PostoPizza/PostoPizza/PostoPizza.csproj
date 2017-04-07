@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddOrderButton.xaml.cs">
+      <DependentUpon>AddOrderButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="addToOrderPopup.xaml.cs">
       <DependentUpon>addToOrderPopup.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,9 @@
     </Compile>
     <Compile Include="Drink.xaml.cs">
       <DependentUpon>Drink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorMessage.xaml.cs">
+      <DependentUpon>ErrorMessage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Food.xaml.cs">
       <DependentUpon>Food.xaml</DependentUpon>
@@ -109,6 +115,10 @@
     <Compile Include="AltLabel.xaml.cs">
       <DependentUpon>AltLabel.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddOrderButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="addToOrderPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -118,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Drink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ErrorMessage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -360,7 +374,6 @@
     <Resource Include="Images\Ingredients\calabrese.png" />
     <Resource Include="Images\Ingredients\capers.png" />
     <Resource Include="Images\Ingredients\chicken.png" />
-    <Resource Include="Images\Ingredients\crème fraiche.png" />
     <Resource Include="Images\Ingredients\fig.png" />
     <Resource Include="Images\Ingredients\fior di latte.png" />
     <Resource Include="Images\Ingredients\fresno chillies.png" />
@@ -408,6 +421,24 @@
     <Resource Include="Images\Menu\riserva_wine_icon.png" />
     <Resource Include="Images\Menu\rose_wine_icon.png" />
     <Resource Include="Images\Menu\white_wine_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chef.png" />
+    <Resource Include="Images\coil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\happyHour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LessButton.png" />
+    <Resource Include="Images\MoreButton.png" />
+    <Resource Include="Images\RegularButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PostoSide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ingredients\creme fraiche.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
