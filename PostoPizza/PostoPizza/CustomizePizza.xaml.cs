@@ -26,6 +26,7 @@ namespace PostoPizza
         {
             set
             {
+                value.isMod = true;
                 for (int i = 0; i < value.ingredients.Length; i++)
                 {
                    // IngredientModifier ing = new IngredientModifier();
@@ -48,6 +49,14 @@ namespace PostoPizza
             {
                 return _pizza;
             }
+        }
+        public bool tooMany()
+        {
+            if (_pizza.ingredients.Length < 7)
+            {
+                return true;
+            }
+            return false;
         }
         public CustomizePizza()
         {
@@ -89,6 +98,7 @@ namespace PostoPizza
             Frame parent = Parent as Frame;
             Food customize = new Food();
             customize.order = order;
+            customize.nav = nav;
             NavigationService.Navigate(customize);
             if (parent != null)
             {
@@ -106,13 +116,50 @@ namespace PostoPizza
                 Ingredients.Children.Insert(0, ing);
             }
         }
+        public int ingCount()
+        {
+            return _pizza.ingredients.Length;
+        }
+        public void setQuantity(Ingredient ingredient, string quantity)
+        {
+            bool found = false;
+            for (int j = 0; j < _pizza.ingredients.Length; j++)
+            {
+                Ingredient inJ = _pizza.ingredients[j];
+                if (inJ.cost == ingredient.cost && inJ.mod == ingredient.mod && inJ.name == ingredient.name && !found)
+                {
+                    
+                    //_pizza.ingredients[j].mod = true;
+                    
+                    _pizza.ingredients[j].quantity = quantity;
+                    return;
+                }
+                
+            }
+            
+        }
         public void addIngredient(Ingredient ingredient)
         {
+            
             IngredientModifier ing = new IngredientModifier();
             ing.ingredient = ingredient;
             ing.custom = this;
             Ingredients.Children.Insert(0, ing);
-
+            if (_pizza != null)
+            {
+                int newLen = _pizza.ingredients.Length + 1;
+                Ingredient[] copyList = new Ingredient[newLen];
+                bool found = false;
+                for (int j = 0; j < _pizza.ingredients.Length; j++)
+                {
+                    Ingredient inJ = _pizza.ingredients[j];
+                    copyList[j] = inJ;
+                }
+                copyList[newLen - 1] = ingredient;
+                _pizza.ingredients = copyList;
+                //_pizza.ingredients = _pizza.ingredients.Union(new Ingredient[] { ingredient }) as Ingredient[];
+            }
+            
             if (Ingredients.Children.Count > 5)
             {
                 double percHeight = (ActualHeight * 0.7) / Ingredients.Children.Count;
@@ -140,6 +187,7 @@ namespace PostoPizza
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             addToOrderPopup popup = new addToOrderPopup();
+            _pizza.isMod = true;
             popup.food = pizza;
             popup.order = order;
             Page.Children.Add(popup);
@@ -155,6 +203,24 @@ namespace PostoPizza
             // TODO - figure out how to remove
             //pizza.ingredients = pizza.ingredients.Except(new Ingredient[] { ing.ingredient }) as Ingredient[];
             Ingredients.Children.Remove(ing);
+            int newLen = _pizza.ingredients.Length - 1;
+            Ingredient[] copyList = new Ingredient[newLen];
+            Ingredient ingredient = ing.ingredient;
+            bool found = false;
+            for (int j = 0; j < _pizza.ingredients.Length; j++)
+            {
+                Ingredient inJ = _pizza.ingredients[j];
+                if (inJ.cost == ingredient.cost && inJ.mod == ingredient.mod && inJ.name == ingredient.name && !found)
+                {
+                    found = true;
+                }
+                else
+                {
+                    copyList[j] = inJ;
+                }
+            }
+            _pizza.ingredients = copyList;
+
         }
     }
 }

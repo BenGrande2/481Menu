@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading.Tasks;
+using System.Timers;
 
 namespace PostoPizza.Images
 {
@@ -20,13 +22,39 @@ namespace PostoPizza.Images
     /// </summary>
     public partial class HomeScreen : Page
     {
+        Timer aTimer;
         public HomeScreen()
         {
             InitializeComponent();
+            DateTime now = new DateTime();
+            label1.Content = label1.Content = DateTime.Now.ToString("hh:mm");
+
+            aTimer = new System.Timers.Timer(2000);
+            // Hook up the Elapsed event for the timer. 
+            aTimer.Elapsed += HandleTimer;
+            aTimer.AutoReset = true;
+            aTimer.Enabled = true;
+
+            
+                
+            
+
+            
+        }
+        private void HandleTimer(Object source, ElapsedEventArgs e)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+
+                label1.Content = DateTime.Now.ToString("hh:mm");
+            });
+            
         }
 
         private void openMenu(object sender, MouseButtonEventArgs e)
         {
+            aTimer.Stop();
+            aTimer.Dispose();
             (Window.GetWindow(this) as MainWindow).openMenu();
         }
 

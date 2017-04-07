@@ -65,5 +65,44 @@ namespace PostoPizza
         {
             custom.removeIng(this);
         }
+        private string _quantity = "Regular";
+        public string quantity {
+            set
+            {
+                _quantity = value;
+                Uri uri = new Uri("Images/"+_quantity+"Button.png", UriKind.Relative);
+                BitmapImage image = new BitmapImage(uri);
+                quantityButton.Source = image;
+                custom.setQuantity(ingredient, quantity);
+            }
+            get
+            {
+                return _quantity;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) // +
+        {
+            if (quantity == "Less")
+            {
+                quantity = "Regular";
+            }
+            else if (quantity == "Regular")
+            {
+                quantity = "More";
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) // -
+        {
+            if (quantity == "More")
+            {
+                quantity = "Regular";
+            }
+            else if (quantity == "Regular")
+            {
+                quantity = "Less";
+            }
+        }
     }
 }

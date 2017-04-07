@@ -76,6 +76,7 @@ namespace PostoPizza
             orderE.Height = 3 * tenthHeight;
             orderE.Margin = new Thickness(quarterWidth*3, -tenthHeight * 1.6, 0, 0);
             orderTab.FontSize = this.ActualHeight * 0.04;
+            (frame.Content as Specials).nav = this;
 
             CallServerEllipse.Width = quarterWidth * 2;
             CallServerEllipse.Height = 4 * tenthHeight;
@@ -95,8 +96,10 @@ namespace PostoPizza
         {
             if (!isCalled)
             {
-                CallServerButton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFEFEDC"));
-                CallServerEllipse.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFEFEDC"));
+                SolidColorBrush brush = new SolidColorBrush();
+                brush.Color = Color.FromRgb(255, 255, 153);
+                CallServerButton.Background = brush;
+                CallServerEllipse.Fill = brush;
                 isCalled = true;
             }
             else

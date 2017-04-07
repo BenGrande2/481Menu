@@ -7,17 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <StackPanel x:Name="orderListStack" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Margin="10,0,-10,0" SizeChanged="resizeOrderlist">
             <Label x:Name="orderNum" Content="Order Number&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
             <Label x:Name="alreadyOrderedLabel" Content="&#xD;&#xA;Already Ordered&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
-            <StackPanel x:Name="AlreadyOrdered" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="Chef" Source="Images/chef.png" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
+                <StackPanel x:Name="AlreadyOrdered" Height="Auto" Width="Auto">
+                </StackPanel>
             </StackPanel>
             <Label x:Name="notOrderedLabel" Content="&#xD;&#xA;Not Ordered Yet&#xD;&#xA;______________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold"/>
-            <StackPanel x:Name="NotOrderedYet" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="Coil" Source="Images/coil.png" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
+                <StackPanel x:Name="NotOrderedYet" Height="Auto" VerticalAlignment="Stretch">
+                </StackPanel>
             </StackPanel>
             <Label x:Name="total" Content="Total: " HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFEFEDCC" FontFamily="Century Gothic"/>
         </StackPanel>
-
+        </ScrollViewer>
     </Grid>
 </UserControl>

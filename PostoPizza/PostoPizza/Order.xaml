@@ -12,7 +12,14 @@
         <ScrollViewer x:Name="OrderListsScroll" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" PanningMode="Both" ScrollViewer.VerticalScrollBarVisibility="Hidden" RenderTransformOrigin="0.5,0.5">
             <StackPanel Background="#FF323232">
                 <Border x:Name="orderBorder" Padding="15">
-                    <StackPanel x:Name="OrderLists" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Bottom" Width="Auto" Orientation="Horizontal"/>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<StackPanel Orientation="Vertical">
+                            <Image x:Name="chefImage" Source="Images/chef.png"></Image>
+                            <Image x:Name="coilImage" Source="Images/coil.png"></Image>
+                        </StackPanel>-->
+                        <StackPanel x:Name="OrderLists" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Bottom" Width="Auto" Orientation="Horizontal"/>
+                    </StackPanel>
+                    
                 </Border>
                 <StackPanel x:Name="orderBtns" Height="Auto" RenderTransformOrigin="0.497,0.503" VerticalAlignment="Stretch" Orientation="Horizontal">
                     <Button x:Name="sendOrdBtn" Content="Send Order(s)" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="29" Width="Auto" Background="#FFEFEDCC" FontFamily="Century Gothic" Click="Button_Click" FontWeight="Bold"/>

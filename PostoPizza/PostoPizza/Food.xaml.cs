@@ -62,10 +62,26 @@ namespace PostoPizza
                     mf.menuItem = category[j];
                     if (menu.Menu[i].Name == "Pizza")
                     {
-                        mf.MouseDoubleClick += Mf_MouseDoubleClick;
-                   
+                        
+                        mf.TouchDown += Mf_TouchDown;
+                        mf.TouchUp += Mf_TouchUp;
+
+                        mf.MouseDown += Mf_ClickDown;
+                        mf.MouseUp += Mf_ClickUp;
+
                     }
-                    mf.MouseRightButtonDown += Mf_MouseDown;
+                    else
+                    {
+                        mf.TouchUp += Mf_TouchUpNoPizza;
+                        
+
+                        mf.MouseDown += Mf_MouseDown;
+                        mf.TouchDown += Mf_TouchDown;
+
+                    }
+                    
+                    
+
                     //mf.MouseDown += Mf_MouseDown;
                     menuList1.Children.Add(mf);
                     
@@ -74,6 +90,51 @@ namespace PostoPizza
             }
   
         }
+        int timestamp;
+        private void Mf_TouchDown(object sender, TouchEventArgs e)
+        {
+            
+            timestamp = e.Timestamp;
+            
+        }
+        private void Mf_TouchUpNoPizza(object sender, TouchEventArgs e)
+        {
+            Mf_MouseDoubleClick(sender, null);
+        }
+        private void Mf_TouchUp(object sender, TouchEventArgs e)
+        {
+            if (e.Timestamp - timestamp < 1000)
+            {
+                this.Mf_MouseDown(sender, null);
+            }
+            else
+            {
+                Mf_MouseDoubleClick(sender, null);
+            }
+        }
+
+        private void Mf_ClickDown(object sender, MouseButtonEventArgs e)
+        {
+
+            timestamp = e.Timestamp;
+
+        }
+        private void Mf_ClickUp(object sender, MouseButtonEventArgs e)
+        {
+            
+            if (e.Timestamp - timestamp < 1000)
+            {
+                this.Mf_MouseDown(sender, null);
+            }
+            else
+            {
+                Mf_MouseDoubleClick(sender, null);
+            }
+        }
+
+
+
+
 
         private void Mf_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -149,9 +210,6 @@ namespace PostoPizza
                 
                 i++;
             }
-
-
-            menuList2.Margin = new Thickness(this.ActualHeight * 0.05, this.ActualHeight * 0.06, 0, 0);
             
         }
         public Navigation nav;

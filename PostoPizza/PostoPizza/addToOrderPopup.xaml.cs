@@ -55,6 +55,17 @@ namespace PostoPizza
         public int childVal = 0;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (food.isMod)
+            {
+                for (int j = 0; j < food.ingredients.Length; j++)
+                {
+                    food.Price += food.ingredients[j].cost;
+                    if (food.ingredients[j].mod == true || food.ingredients[j].quantity != "Regular")
+                    {
+                        food.title += " + " + food.ingredients[j].quantity + " " + food.ingredients[j].name;
+                    }
+                }
+            }
             (order.OrderLists.Children[childVal] as OrderList).addItem(food);
             Food foodS = ((this.Parent as Grid).Parent as Food);
             Drink drinkS = ((this.Parent as Grid).Parent as Drink);
@@ -83,6 +94,17 @@ namespace PostoPizza
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            if (food.isMod)
+            {
+                for (int j = 0; j < food.ingredients.Length; j++)
+                {
+                    food.Price += food.ingredients[j].cost;
+                    if (food.ingredients[j].mod == true || food.ingredients[j].quantity != "Regular")
+                    {
+                        food.title += " + " + food.ingredients[j].quantity + " " + food.ingredients[j].name;
+                    }
+                }
+            }
             (order.OrderLists.Children[childVal] as OrderList).addItem(food);
             Food foodS = ((this.Parent as Grid).Parent as Food);
             Drink drinkS = ((this.Parent as Grid).Parent as Drink);

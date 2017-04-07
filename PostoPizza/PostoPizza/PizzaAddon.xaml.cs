@@ -25,57 +25,91 @@ namespace PostoPizza
         {
             InitializeComponent();
         }
-
+        private void cancel_add(object sender, RoutedEventArgs e)
+        {
+            customize.Page.Children.Remove(this);
+        }
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //(order.OrderLists.Children[0] as OrderList).addItem(food);
             //customize.Page.Children.Remove(cover);
-            if (proscuitto.IsChecked == true)
+            CheckBox[] boxes = new CheckBox[] { proscuitto, anchovy, egg, truffleOil, Arugula, smoked_pancetta, sausage, salami, tomato, gorgonzola, calabrese };
+            int count = 0;
+            for (int j = 0; j < boxes.Length; j++)
             {
-               
-                customize.addIngredient(new Ingredient("proscuitto"));
+                if (boxes[j].IsChecked == true)
+                {
+                    count++;
+                }
             }
-            if (anchovy.IsChecked == true)
+            if (count + customize.ingCount() <= 7)
             {
-                customize.addIngredient(new Ingredient("anchovy"));     
+                if (proscuitto.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("proscuitto", 3, true));
+                }
+                if (anchovy.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("anchovy", 3, true));
+                }
+                if (egg.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("egg", 3, true));
+                }
+                if (truffleOil.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("truffle oil", 3, true));
+                }
+                if (Arugula.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("arugula", 3, true));
+                }
+                if (smoked_pancetta.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("smoked pancetta", 6, true));
+                }
+                if (sausage.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("sausage", 6, true));
+                }
+                if (salami.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("salami", 6, true));
+                }
+                if (tomato.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("tomato", 6, true));
+                }
+                if (gorgonzola.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("gorgonzola", 6, true));
+                }
+                if (calabrese.IsChecked == true)
+                {
+                    customize.addIngredient(new Ingredient("calabrese", 6, true));
+                }
+                customize.Page.Children.Remove(this);
             }
-            if (egg.IsChecked == true)
+            else
             {
-                customize.addIngredient(new Ingredient("egg"));
+                ErrorMessage errorMessage = new ErrorMessage();
+                errorMessage.parent = customize;
+                errorMessage.Width = customize.ActualWidth * 0.4;
+
+                Rectangle back = new Rectangle();
+                back.Width = customize.ActualWidth;
+                back.Height = customize.ActualHeight;
+
+                SolidColorBrush brush = new SolidColorBrush();
+                brush.Color = Color.FromScRgb(0.3f, 255, 255, 255);
+                
+                back.Fill = brush;
+                customize.Page.Children.Add(back);
+                errorMessage.Header.Content = "Uh oh! You have too many toppings";
+                errorMessage.Body.Text = "Having too many toppings makes your pizza cook unevenly. To make sure your pizza is cooked to perfection, you can only choose up to 7 toppings";
+                errorMessage.back = back;
+                customize.Page.Children.Add(errorMessage);
             }
-            if (truffleOil.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("truffle oil"));
-            }
-            if (Arugula.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("arugula"));
-            }
-            if (smoked_pancetta.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("smoked pancetta"));
-            }
-            if (sausage.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("sausage"));
-            }
-            if (salami.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("salami"));
-            }
-            if (tomato.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("tomato"));
-            }
-            if (gorgonzola.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("gorgonzola"));
-            }
-            if (calabrese.IsChecked == true)
-            {
-                customize.addIngredient(new Ingredient("calabrese"));
-            }
-            customize.Page.Children.Remove(this);
         }
     }
 }

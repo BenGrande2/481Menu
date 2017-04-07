@@ -14,6 +14,7 @@ namespace PostoPizza
         public String category;
         public String title;
         public double Price;
+        public bool isMod = false;
         public string Ingredients
         {
             set
